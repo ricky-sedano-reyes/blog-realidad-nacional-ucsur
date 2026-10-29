@@ -1,8 +1,8 @@
-# Portal Académico EC1 — El Boom Agroexportador Peruano y sus Impactos Socioambientales
+# Portal Académico EC1 — PROBLEMÁTICA DE LA AGROEXPORTACIÓN EN EL PERÚ: IMPACTO EN EL ÁMBITO SOCIOAMBIENTAL
 
 **Universidad Científica del Sur (UCSUR)**  
 **Asignatura:** Análisis de la Realidad Nacional y Ambiental (Ciclo 2026-2)  
-**Evaluación:** Evaluación Continua 1 (EC1) — Informe Académico, Panel de Análisis y Portafolio de Actividades  
+**Evaluación:** Evaluación Continua 1 (EC1) — Informe Académico y Portafolio de Actividades  
 **Docente:** Prof. Giovanni Paolo Figari Salas  
 **Enlace Oficial del Blog:** https://blog-realidad-nacional-ucsur.netlify.app/  
 
@@ -10,14 +10,14 @@
 
 ## Integrantes del Grupo 1
 
-| Código | Apellidos y Nombres | Sección Responsable en el Informe y Panel |
-| :--- | :--- | :--- |
-| `100221138` | **García Mori, Luis Miguel** | Sección 1 (Introducción) y Sección 2.1 (Descripción de la problemática) |
-| `100035063` | **García Valdera, Enrique** | Sección 2.2 (Contexto histórico y social desde la República) |
-| `100221024` | **Marchan Infante, Enni Juliana** | Sección 2.3 (Causas: social, económica, política y ambiental) |
-| `100233029` | **Rozand Copara, Erick Enrique** | Sección 2.4 (Consecuencias: social, económica, política y ambiental) |
-| `100228037` | **Sedano Reyes, Ricky Jhony** | Sección 2.5 y Tabla 1 APA (Relación entre los tres hechos) |
-| `100228809` | **Vasquez Morales, Milagros** | Sección 2.6 (Desafíos territoriales y sostenibilidad) y Sección 3 (Conclusiones) |
+| Código | Apellidos y Nombres |
+| :--- | :--- |
+| `100221138` | **García Mori, Luis Miguel** |
+| `100035063` | **García Valdera, Enrique** |
+| `100221024` | **Marchan Infante, Enni Juliana** |
+| `100233029` | **Rozand Copara, Erick Enrique** |
+| `100228037` | **Sedano Reyes, Ricky Jhony** |
+| `100228809` | **Vasquez Morales, Milagros** |
 
 ---
 
@@ -25,13 +25,13 @@
 
 ```text
 BLOG/
-├── index.html                          # Publicación principal (Informe Académico + Laboratorio de Datos + Panel)
+├── index.html                          # Publicación principal (Informe Académico + Laboratorio de Datos)
 ├── actividades.html                    # Entrada directa a la sección «Actividades en clase»
 ├── styles.css                          # Hoja de estilos maestra (importa módulos CSS institucionales UCSUR)
 ├── app.js                              # Inicializador principal de la aplicación
 ├── logo-ucsur.png                      # Logotipo oficial de la Universidad Científica del Sur
 ├── netlify.toml                        # Configuración de despliegue continuo para Netlify
-├── TRABAJO_GRUPAL_Analisis_realidad_FINAL_v2.docx # Informe oficial corregido en formato Word (APA 7)
+├── PROBLEMÁTICA DE LA AGROEXPORTACIÓN EN EL PERÚ - IMPACTO EN EL ÁMBITO SOCIOAMBIENTAL.docx # Informe oficial en formato Word (APA 7)
 ├── actividades en clase/               # Carpeta oficial de evidencias (Semanas 1, 2 y 3)
 │   ├── Actividad en clase 1..docx
 │   ├── Guía 1.docx

@@ -2,7 +2,7 @@
  * ============================================================================
  * UNIVERSIDAD CIENTÍFICA DEL SUR (UCSUR) — DATOS DEL INFORME Y ATLAS REGIONAL
  * Archivo: assets/js/data-report.js
- * Fuente: TRABAJO_GRUPAL_Analisis_realidad_FINAL_v2.docx (Grupo 1 - EC1)
+ * Fuente: PROBLEMÁTICA DE LA AGROEXPORTACIÓN EN EL PERÚ - IMPACTO EN EL ÁMBITO SOCIOAMBIENTAL.docx (Grupo 1 - EC1)
  * ============================================================================
  */
 
@@ -17,7 +17,7 @@ window.UCSUR_REPORT_DATA = {
     group: "Grupo 1",
     date: "Octubre 2026",
     blogUrl: "https://blog-realidad-nacional-ucsur.netlify.app/",
-    docxPath: "./TRABAJO_GRUPAL_Analisis_realidad_FINAL_v2.docx"
+    docxPath: "./PROBLEMÁTICA DE LA AGROEXPORTACIÓN EN EL PERÚ - IMPACTO EN EL ÁMBITO SOCIOAMBIENTAL.docx"
   },
 
   /* Datos para el Gráfico 1: Valor de Agroexportaciones por Rubro (US$ Millones) */
