@@ -1,0 +1,401 @@
+/* ==========================================================================
+   ADAPTABILIDAD RESPONSIVA (PC, LAPTOP, TABLET, CELULAR) E IMPRESIÓN
+   Archivo: assets/css/responsive.css
+   ========================================================================== */
+
+/* Ajuste únicamente para ventanas extremadamente bajas (<= 550px de alto) */
+@media (max-height: 550px) and (min-width: 769px) {
+  .hero-cover-container {
+    padding: 0.75rem 1.75rem 0.9rem;
+  }
+
+  .hero-top-badges {
+    margin-bottom: 0.65rem;
+  }
+
+  .hero-main-title {
+    font-size: clamp(1.75rem, 2.8vw, 2.35rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.14;
+  }
+
+  .hero-lead-box {
+    padding: 0.8rem 1.25rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .hero-lead-text {
+    font-size: 0.95rem;
+    line-height: 1.52;
+  }
+}
+
+/* Pantallas medianas y laptops compactas */
+@media (max-width: 1180px) {
+  .kpi-editorial-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kpi-cell:nth-child(2) {
+    border-right: none;
+  }
+
+  .kpi-cell:nth-child(1),
+  .kpi-cell:nth-child(2) {
+    border-bottom: 1px solid var(--line-subtle);
+  }
+
+  .academic-workspace {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .toc-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .toc-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.35rem;
+  }
+
+  .activities-masthead-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .team-course-meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tabletas y dispositivos móviles (hasta 900px) */
+@media (max-width: 900px) {
+  .header-container {
+    flex-wrap: wrap;
+    padding: 0.6rem 1.15rem;
+    gap: 0.6rem;
+  }
+
+  .primary-nav {
+    order: 3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-tab-btn {
+    justify-content: center;
+    padding: 0.46rem 0.5rem;
+    font-size: 0.78rem;
+  }
+
+  .hechos-triad-grid,
+  .dimensions-matrix-grid,
+  .territory-explorer-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manuscript-section {
+    padding: 1.65rem 1.35rem;
+  }
+}
+
+/* Diseño Especial Optimizado para Celulares (Smartphones <= 640px) */
+@media (max-width: 640px) {
+  /* Franja institucional compacta en celular */
+  .ucsur-topbar-inner {
+    padding: 0.32rem 0.9rem;
+    justify-content: center;
+  }
+
+  .ucsur-topbar-left span:not(.ucsur-pill-badge):not(:nth-child(2)) {
+    display: none;
+  }
+
+  .ucsur-topbar-right {
+    display: none;
+  }
+
+  /* Cabecera móvil limpia y ergonómica */
+  .header-container {
+    padding: 0.5rem 0.85rem;
+    min-height: auto;
+    gap: 0.45rem;
+  }
+
+  .brand-logo-img {
+    height: 36px;
+  }
+
+  .brand-vertical-rule,
+  .brand-meta {
+    display: none;
+  }
+
+  .header-utilities {
+    gap: 0.35rem;
+  }
+
+  .utility-btn {
+    padding: 0.38rem 0.62rem;
+    font-size: 0.72rem;
+  }
+
+  .kbd-hint {
+    display: none;
+  }
+
+  .primary-nav {
+    padding-top: 0.42rem;
+    gap: 0.28rem;
+  }
+
+  .nav-tab-btn {
+    font-size: 0.73rem;
+    padding: 0.42rem 0.35rem;
+    gap: 0.3rem;
+  }
+
+  .nav-tab-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Portada en celular: encaja exactamente hasta la línea anaranjada */
+  .hero-cover-container {
+    padding: 0.9rem 1rem 1rem;
+  }
+
+  .hero-top-badges {
+    gap: 0.35rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .hero-badge-amber,
+  .hero-badge-outline {
+    font-size: 0.62rem;
+    padding: 0.18rem 0.5rem;
+  }
+
+  .hero-badge-outline:nth-child(3) {
+    display: none;
+  }
+
+  .hero-main-title {
+    font-size: clamp(1.32rem, 5.4vw, 1.72rem);
+    line-height: 1.16;
+    margin-bottom: 0.65rem;
+  }
+
+  .hero-lead-box {
+    padding: 0.68rem 0.85rem;
+    margin-bottom: 0.8rem;
+    border-left-width: 3px;
+  }
+
+  .hero-lead-text {
+    font-size: 0.82rem;
+    line-height: 1.46;
+  }
+
+  .masthead-action-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+    width: 100%;
+  }
+
+  .btn-editorial-amber,
+  .btn-editorial-primary,
+  .btn-editorial-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 0.56rem 0.5rem;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  /* Indicadores y cuerpo en celular */
+  .kpi-editorial-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-cell {
+    padding: 1rem 1.1rem;
+    border-right: none !important;
+    border-bottom: 1px solid var(--line-subtle);
+  }
+
+  .kpi-cell:last-child {
+    border-bottom: none;
+  }
+
+  .kpi-figure {
+    font-size: 1.5rem;
+  }
+
+  .academic-workspace {
+    padding: 1.35rem 0.85rem 2.5rem;
+    gap: 1.25rem;
+  }
+
+  .toc-panel {
+    padding: 0.9rem;
+  }
+
+  .toc-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+  }
+
+  .toc-link {
+    font-size: 0.74rem;
+    padding: 0.32rem 0.45rem;
+  }
+
+  .toc-link.toc-sub {
+    padding-left: 0.45rem;
+    font-size: 0.72rem;
+  }
+
+  .manuscript-section {
+    padding: 1.25rem 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+  }
+
+  .subsection-heading {
+    font-size: 1.15rem;
+  }
+
+  .academic-prose p,
+  .editorial-bullet-list li,
+  .dimension-box p,
+  .conclusion-row-body p {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.68;
+  }
+
+  .data-lab-header {
+    padding: 0.9rem 1rem;
+  }
+
+  .data-lab-body {
+    padding: 1rem;
+  }
+
+  .data-lab-tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .territory-stats-grid,
+  .activities-cards-grid,
+  .activities-stats-box,
+  .team-course-meta-grid,
+  .team-members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-closing-banner,
+  .team-closing-body {
+    padding: 1.2rem 1rem;
+  }
+
+  .conclusion-row-card {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    padding: 1.1rem;
+  }
+
+  .activities-masthead {
+    padding: 1.75rem 1rem;
+  }
+
+  .activities-main-container {
+    padding: 1.35rem 0.85rem 2.5rem;
+  }
+
+  .activities-control-bar {
+    padding: 0.85rem;
+  }
+
+  .act-search-input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .scroll-top-btn {
+    width: 42px;
+    height: 42px;
+    bottom: 1.1rem;
+    right: 1.1rem;
+  }
+
+  .modal-backdrop {
+    padding: 0.5rem;
+  }
+
+  .modal-topbar {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .doc-sheet {
+    padding: 1rem;
+  }
+
+  .modal-viewport-doc {
+    padding: 0.65rem;
+  }
+}
+
+/* Impresión Académica Limpia (Ctrl+P / Exportar PDF) */
+@media print {
+  .page-loader,
+  .scroll-top-btn,
+  .ucsur-topbar,
+  .site-header,
+  .toc-sidebar,
+  .masthead-action-row,
+  .data-lab-tabs,
+  .table-highlight-btns,
+  .references-toolbar,
+  .copy-ref-btn,
+  .site-footer,
+  .modal-backdrop {
+    display: none !important;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .academic-workspace {
+    display: block;
+    padding: 0;
+  }
+
+  .manuscript-section,
+  .team-closing-section {
+    border: none;
+    box-shadow: none;
+    padding: 1rem 0;
+    page-break-inside: avoid;
+  }
+}

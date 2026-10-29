@@ -1,0 +1,17 @@
+/* ==========================================================================
+   UNIVERSIDAD CIENTÍFICA DEL SUR (UCSUR) — HOJA DE ESTILOS PRINCIPAL
+   Proyecto: Portal Académico y Dossier de Investigación EC1 (Ciclo 2026-2)
+   Curso: Análisis de la Realidad Nacional y Ambiental
+   Docente: Giovanni Paolo Figari Salas
+   --------------------------------------------------------------------------
+   Arquitectura CSS Modular:
+   1. ./assets/css/variables.css   -> Paleta institucional UCSUR (#0A387D y #E88320) y tokens tipográficos
+   2. ./assets/css/layout.css      -> Maquetación editorial Swiss Grid, Masthead, TOC y estructura
+   3. ./assets/css/components.css  -> Laboratorio de datos, Atlas regional, Tabla APA, Panel y Actividades
+   4. ./assets/css/responsive.css  -> Adaptabilidad móvil, tablet, escritorio e impresión académica
+   ========================================================================== */
+
+@import url('./assets/css/variables.css');
+@import url('./assets/css/layout.css');
+@import url('./assets/css/components.css');
+@import url('./assets/css/responsive.css');

@@ -1,0 +1,1583 @@
+/* ==========================================================================
+   COMPONENTES INTERACTIVOS, GRÁFICOS DE DATOS Y VISORES MULTIMEDIA
+   Archivo: assets/css/components.css
+   ========================================================================== */
+
+/* ==========================================================================
+   1. TARJETAS COMPARATIVAS DE LOS TRES HECHOS SOCIOAMBIENTALES (2.1)
+   ========================================================================== */
+.hechos-triad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+  margin: 1.5rem 0 1.75rem;
+}
+
+.hecho-dossier-card {
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-strong);
+  border-top: 4px solid var(--ucsur-navy);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hecho-dossier-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.hecho-dossier-card.hecho-amazonia {
+  border-top-color: var(--eco-amazonia);
+}
+
+.hecho-dossier-card.hecho-arandano {
+  border-top-color: var(--ucsur-navy);
+}
+
+.hecho-dossier-card.hecho-esparrago {
+  border-top-color: var(--ucsur-amber);
+}
+
+.hecho-card-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.45rem;
+  display: inline-block;
+}
+
+.hecho-amazonia .hecho-card-kicker { color: var(--eco-amazonia); }
+.hecho-arandano .hecho-card-kicker { color: var(--ucsur-navy); }
+.hecho-esparrago .hecho-card-kicker { color: var(--ucsur-amber-hover); }
+
+.hecho-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin-bottom: 0.55rem;
+  line-height: 1.25;
+}
+
+.hecho-card-body {
+  font-size: 0.84rem;
+  color: var(--ink-600);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.hecho-card-metrics {
+  border-top: 1px solid var(--line-subtle);
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+}
+
+.hecho-metric-row {
+  display: flex;
+  justify-content: space-between;
+  color: var(--ink-800);
+}
+
+.hecho-metric-row strong {
+  color: var(--ucsur-navy);
+}
+
+/* ==========================================================================
+   2. LABORATORIO DE DATOS INTERACTIVO (GRÁFICOS Y ATLAS TERRITORIAL)
+   ========================================================================== */
+.data-lab-widget {
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-strong);
+  border-left: 4px solid var(--ucsur-navy);
+  margin: 1.85rem 0;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+
+.data-lab-header {
+  background-color: var(--bg-white);
+  padding: 1.15rem 1.5rem;
+  border-bottom: 1px solid var(--line-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.data-lab-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.data-lab-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ucsur-amber-hover);
+}
+
+.data-lab-title {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--ink-900);
+}
+
+.data-lab-tabs {
+  display: inline-flex;
+  background-color: var(--bg-subtle);
+  padding: 0.22rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--line-subtle);
+  gap: 0.2rem;
+}
+
+.lab-tab-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--ink-600);
+  padding: 0.38rem 0.78rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.lab-tab-btn:hover {
+  color: var(--ink-900);
+}
+
+.lab-tab-btn.active {
+  background-color: var(--ucsur-navy);
+  color: #FFFFFF;
+}
+
+.data-lab-body {
+  padding: 1.5rem;
+}
+
+.chart-pane {
+  display: none;
+}
+
+.chart-pane.active {
+  display: block;
+}
+
+/* Barras horizontales comparativas de alta precisión */
+.bar-chart-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bar-row-item {
+  background-color: var(--bg-white);
+  border: 1px solid var(--line-subtle);
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--radius-xs);
+}
+
+.bar-row-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.bar-row-label {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ink-900);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bar-row-value {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--ucsur-navy);
+}
+
+.bar-track {
+  width: 100%;
+  height: 12px;
+  background-color: var(--bg-subtle);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.45rem;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.6s var(--ease-editorial);
+}
+
+.bar-fill-navy { background: var(--ucsur-navy); }
+.bar-fill-blue { background: var(--ucsur-blue); }
+.bar-fill-green { background: var(--eco-amazonia); }
+.bar-fill-amber { background: var(--ucsur-amber); }
+.bar-fill-alert { background: var(--eco-alerta); }
+
+.bar-row-note {
+  font-size: 0.78rem;
+  color: var(--ink-600);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Atlas Territorial Interactivo (Regiones del Perú) */
+.territory-explorer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.territory-selector-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.territory-btn {
+  appearance: none;
+  width: 100%;
+  text-align: left;
+  background-color: var(--bg-white);
+  border: 1px solid var(--line-subtle);
+  border-left: 4px solid var(--line-strong);
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.territory-btn:hover {
+  border-color: var(--ucsur-blue-border);
+  background-color: var(--ucsur-blue-tint);
+}
+
+.territory-btn.active {
+  background-color: var(--bg-white);
+  border-color: var(--ucsur-navy);
+  border-left-color: var(--ucsur-amber);
+  box-shadow: var(--shadow-xs);
+}
+
+.territory-btn-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+}
+
+.territory-btn-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ink-900);
+}
+
+.territory-btn-zone {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.1rem 0.42rem;
+  border-radius: 2px;
+}
+
+.zone-selva {
+  background: var(--eco-amazonia-bg);
+  color: var(--eco-amazonia);
+}
+
+.zone-costa {
+  background: var(--eco-costa-bg);
+  color: var(--eco-costa);
+}
+
+.territory-btn-sub {
+  font-size: 0.77rem;
+  color: var(--ink-600);
+}
+
+.territory-detail-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--line-strong);
+  border-top: 3px solid var(--ucsur-navy);
+  padding: 1.35rem;
+  border-radius: var(--radius-xs);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.territory-detail-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ucsur-amber-hover);
+  margin-bottom: 0.3rem;
+}
+
+.territory-detail-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin-bottom: 0.65rem;
+}
+
+.territory-detail-desc {
+  font-size: 0.88rem;
+  color: var(--ink-800);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.territory-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line-subtle);
+}
+
+.territory-stat-box {
+  background: var(--bg-paper);
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line-subtle);
+  border-radius: 3px;
+}
+
+.territory-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  display: block;
+}
+
+.territory-stat-val {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ucsur-navy);
+}
+
+/* ==========================================================================
+   3. LÍNEA DE TIEMPO HISTÓRICA REPUBLICANA (SECCIÓN 2.2)
+   ========================================================================== */
+.historical-timeline {
+  margin: 1.5rem 0;
+  border-left: 3px solid var(--ucsur-navy);
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.timeline-step {
+  position: relative;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-subtle);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-xs);
+}
+
+.timeline-step::before {
+  content: "";
+  position: absolute;
+  left: -1.92rem;
+  top: 1.15rem;
+  width: 11px;
+  height: 11px;
+  background-color: var(--ucsur-amber);
+  border: 2px solid var(--bg-white);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--ucsur-navy);
+}
+
+.timeline-era-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ucsur-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.timeline-step-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin-bottom: 0.35rem;
+}
+
+.timeline-step-text {
+  font-size: 0.86rem;
+  color: var(--ink-600);
+  line-height: 1.55;
+}
+
+/* Lista de hechos históricos con viñetas cuadradas UCSUR */
+.editorial-bullet-list {
+  list-style: none;
+  margin: 1.25rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.editorial-bullet-list li {
+  position: relative;
+  padding: 1rem 1.25rem 1rem 2.35rem;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-subtle);
+  border-left: 3px solid var(--ucsur-navy);
+  font-family: var(--font-serif);
+  font-size: var(--reading-font-size);
+  line-height: 1.72;
+  color: var(--ink-800);
+  text-align: justify;
+}
+
+.editorial-bullet-list li::before {
+  content: "▪";
+  position: absolute;
+  left: 1rem;
+  top: 0.95rem;
+  color: var(--ucsur-amber);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   4. TARJETAS DE DIMENSIONES: CAUSAS (2.3) Y CONSECUENCIAS (2.4)
+   ========================================================================== */
+.dimensions-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.dimension-box {
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-xs);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.dimension-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.65rem;
+  border-bottom: 2px solid var(--ucsur-navy);
+}
+
+.dimension-box-header.consequence-header {
+  border-bottom-color: var(--ucsur-amber);
+}
+
+.dimension-title {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dimension-type-pill {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.48rem;
+  border-radius: 2px;
+}
+
+.pill-cause {
+  background-color: var(--ucsur-blue-tint);
+  color: var(--ucsur-navy);
+  border: 1px solid var(--ucsur-blue-border);
+}
+
+.pill-consequence {
+  background-color: var(--ucsur-amber-light);
+  color: var(--ucsur-amber-hover);
+  border: 1px solid var(--ucsur-amber-border);
+}
+
+.dimension-box p {
+  font-family: var(--font-serif);
+  font-size: 0.96rem;
+  line-height: 1.72;
+  color: var(--ink-800);
+  text-align: justify;
+  margin: 0;
+}
+
+/* ==========================================================================
+   5. TABLA 1 EN FORMATO APA 7 INTERACTIVA (SECCIÓN 2.5)
+   ========================================================================== */
+.apa-table-container {
+  margin: 1.75rem 0 2rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--line-strong);
+  padding: 1.5rem;
+  border-radius: var(--radius-xs);
+}
+
+.apa-table-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.15rem;
+  border-bottom: 1px solid var(--line-subtle);
+}
+
+.apa-caption-block {
+  margin-bottom: 0.85rem;
+}
+
+.apa-table-num {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink-900);
+}
+
+.apa-table-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--ink-800);
+}
+
+.table-highlight-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.col-filter-btn {
+  appearance: none;
+  background: var(--bg-paper);
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  font-weight: 600;
+  color: var(--ink-600);
+  padding: 0.3rem 0.65rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.col-filter-btn:hover {
+  border-color: var(--ucsur-navy);
+  color: var(--ucsur-navy);
+}
+
+.col-filter-btn.active {
+  background: var(--ucsur-navy);
+  border-color: var(--ucsur-navy);
+  color: #FFFFFF;
+}
+
+.apa-table-scroll {
+  overflow-x: auto;
+}
+
+.apa-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid var(--ink-900);
+  border-bottom: 2px solid var(--ink-900);
+  font-size: 0.85rem;
+  min-width: 720px;
+}
+
+.apa-table thead th {
+  border-bottom: 1px solid var(--ink-900);
+  padding: 0.8rem 0.9rem;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--ink-900);
+  background-color: var(--bg-paper);
+  transition: background-color 0.2s ease;
+}
+
+.apa-table tbody td {
+  padding: 0.85rem 0.9rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line-subtle);
+  line-height: 1.55;
+  color: var(--ink-800);
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.apa-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.apa-table tbody td:first-child {
+  font-weight: 700;
+  color: var(--ucsur-navy-dark);
+  width: 19%;
+  background-color: rgba(250, 249, 245, 0.6);
+}
+
+.apa-table .col-highlighted {
+  background-color: var(--ucsur-amber-light) !important;
+}
+
+.apa-table .col-dimmed {
+  opacity: 0.45;
+}
+
+.apa-table-note {
+  margin-top: 0.8rem;
+  font-family: var(--font-serif);
+  font-size: 0.84rem;
+  color: var(--ink-600);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   6. CONCLUSIONES NUMERADAS (1 AL 6) Y REFERENCIAS APA 7 CON COPIADO
+   ========================================================================== */
+.conclusions-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.conclusion-row-card {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 1.15rem;
+  padding: 1.35rem 1.5rem;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-strong);
+  border-left: 4px solid var(--ucsur-navy);
+  border-radius: var(--radius-xs);
+  align-items: start;
+}
+
+.conclusion-num-box {
+  width: 44px;
+  height: 44px;
+  background-color: var(--ucsur-navy);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xs);
+  border-bottom: 3px solid var(--ucsur-amber);
+}
+
+.conclusion-row-body p {
+  font-family: var(--font-serif);
+  font-size: var(--reading-font-size);
+  line-height: 1.75;
+  color: var(--ink-800);
+  text-align: justify;
+  margin: 0;
+}
+
+/* Buscador y Lista de Referencias APA 7 */
+.references-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.35rem;
+  padding: 0.9rem 1.15rem;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-xs);
+}
+
+.ref-search-input {
+  flex: 1;
+  min-width: 240px;
+  padding: 0.55rem 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-xs);
+  background-color: var(--bg-white);
+  color: var(--ink-900);
+}
+
+.ref-search-input:focus {
+  outline: none;
+  border-color: var(--ucsur-navy);
+  box-shadow: 0 0 0 2px rgba(10, 56, 125, 0.12);
+}
+
+.apa-ref-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.apa-ref-card {
+  position: relative;
+  padding: 1rem 1.2rem 1rem 3rem;
+  text-indent: -1.8rem;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-800);
+  transition: border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.apa-ref-card:hover {
+  border-color: var(--ucsur-blue-border);
+  background-color: var(--bg-white);
+}
+
+.apa-ref-card a {
+  color: var(--ucsur-blue);
+  word-break: break-all;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.apa-ref-card a:hover {
+  color: var(--ucsur-amber-hover);
+}
+
+.copy-ref-btn {
+  text-indent: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.65rem;
+  padding: 0.15rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  background-color: var(--bg-white);
+  color: var(--ink-600);
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.copy-ref-btn:hover {
+  background-color: var(--ucsur-navy);
+  color: #FFFFFF;
+  border-color: var(--ucsur-navy);
+}
+
+/* ==========================================================================
+   7. GUÍA INTERACTIVA DEL PANEL DE ANÁLISIS (MESA REDONDA 15 MINUTOS)
+   ========================================================================== */
+.panel-guide-section {
+  background-color: var(--bg-white);
+  border: 1px solid var(--line-strong);
+  border-top: 4px solid var(--ucsur-amber);
+  padding: 2rem 2.25rem;
+  border-radius: var(--radius-xs);
+}
+
+.panel-timer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--ucsur-navy);
+  color: #FFFFFF;
+  padding: 1rem 1.35rem;
+  border-radius: var(--radius-xs);
+  margin-bottom: 1.5rem;
+}
+
+.timer-display-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timer-clock {
+  font-family: var(--font-mono);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--ucsur-amber);
+  letter-spacing: 0.04em;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.timer-btn {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.timer-btn:hover {
+  background: var(--ucsur-amber);
+  border-color: var(--ucsur-amber);
+}
+
+.panel-speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.speaker-card {
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-strong);
+  padding: 1.1rem;
+  border-radius: var(--radius-xs);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.speaker-order {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--ucsur-amber-hover);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.speaker-name {
+  font-family: var(--font-serif);
+  font-size: 1.04rem;
+  font-weight: 700;
+  color: var(--ucsur-navy);
+  margin-bottom: 0.2rem;
+}
+
+.speaker-topic {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin-bottom: 0.45rem;
+}
+
+.speaker-points {
+  font-size: 0.78rem;
+  color: var(--ink-600);
+  line-height: 1.48;
+  margin-bottom: 0.75rem;
+}
+
+.speaker-time-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ucsur-navy);
+  background: var(--ucsur-blue-tint);
+  border: 1px solid var(--ucsur-blue-border);
+  padding: 0.18rem 0.5rem;
+  border-radius: 2px;
+  align-self: flex-start;
+}
+
+/* ==========================================================================
+   8. SECCIÓN INDEPENDIENTE: «ACTIVIDADES EN CLASE»
+   ========================================================================== */
+.activities-masthead {
+  background-color: var(--ucsur-navy-dark);
+  color: #FFFFFF;
+  border-bottom: 4px solid var(--ucsur-amber);
+  padding: 2.75rem 1.75rem;
+}
+
+.activities-masthead-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.activities-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background-color: var(--ucsur-amber);
+  color: #FFFFFF;
+  padding: 0.22rem 0.65rem;
+  border-radius: 2px;
+  margin-bottom: 0.9rem;
+}
+
+.activities-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.18;
+  margin-bottom: 0.85rem;
+}
+
+.activities-subtitle {
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.65;
+}
+
+.activities-stats-box {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1.35rem;
+  border-radius: var(--radius-xs);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.act-stat-item {
+  background: rgba(4, 24, 56, 0.45);
+  padding: 0.8rem 0.95rem;
+  border-left: 3px solid var(--ucsur-amber);
+}
+
+.act-stat-num {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+.act-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 0.2rem;
+}
+
+.activities-main-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2.25rem 1.75rem 4rem;
+}
+
+/* Barra de filtros y búsqueda de Actividades */
+.activities-control-bar {
+  background-color: var(--bg-white);
+  border: 1px solid var(--line-strong);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-xs);
+}
+
+.filter-pills-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.filter-pill-btn {
+  appearance: none;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-strong);
+  color: var(--ink-600);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.filter-pill-btn:hover {
+  border-color: var(--ucsur-navy);
+  color: var(--ucsur-navy);
+}
+
+.filter-pill-btn.active {
+  background-color: var(--ucsur-navy);
+  border-color: var(--ucsur-navy);
+  color: #FFFFFF;
+}
+
+.activities-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.act-search-input {
+  padding: 0.48rem 0.85rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  min-width: 230px;
+}
+
+/* Cuadrícula de Evidencias (Tarjetas Académicas) */
+.activities-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+
+.evidence-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--line-strong);
+  border-top: 3px solid var(--ucsur-navy);
+  border-radius: var(--radius-xs);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.22s var(--ease-editorial), box-shadow 0.22s var(--ease-editorial);
+}
+
+.evidence-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.evidence-card.evidence-docx {
+  border-top-color: var(--ucsur-amber);
+}
+
+.evidence-preview-box {
+  position: relative;
+  height: 235px;
+  background-color: var(--ink-900);
+  overflow: hidden;
+  cursor: pointer;
+  border-bottom: 1px solid var(--line-subtle);
+}
+
+.evidence-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.45s var(--ease-editorial);
+}
+
+.evidence-card:hover .evidence-preview-img {
+  transform: scale(1.04);
+}
+
+.evidence-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 37, 84, 0.15) 0%, rgba(4, 24, 56, 0.78) 100%);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem 1.15rem;
+}
+
+.evidence-card:hover .evidence-hover-overlay {
+  opacity: 1;
+}
+
+.overlay-action-pill {
+  background-color: var(--ucsur-amber);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.42rem 0.85rem;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.evidence-top-badges {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.week-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.22rem 0.6rem;
+  border-radius: 2px;
+  background-color: var(--ucsur-navy);
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.format-badge {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.52rem;
+  border-radius: 2px;
+  background-color: rgba(15, 23, 42, 0.85);
+  color: #FFFFFF;
+}
+
+.format-badge.badge-docx {
+  background-color: var(--ucsur-amber);
+}
+
+.evidence-card-body {
+  padding: 1.3rem 1.35rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.evidence-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.16rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+
+.evidence-filename {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-500);
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-subtle);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+  word-break: break-all;
+}
+
+.evidence-card-desc {
+  font-size: 0.85rem;
+  color: var(--ink-600);
+  line-height: 1.58;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.evidence-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.evidence-topic-tag {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  color: var(--ucsur-navy);
+  background-color: var(--ucsur-blue-tint);
+  border: 1px solid var(--ucsur-blue-border);
+  padding: 0.12rem 0.45rem;
+  border-radius: 2px;
+}
+
+.evidence-card-actions {
+  display: flex;
+  gap: 0.55rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line-subtle);
+}
+
+.btn-card-primary {
+  flex: 1;
+  appearance: none;
+  background-color: var(--ucsur-navy);
+  color: #FFFFFF;
+  border: 1px solid var(--ucsur-navy);
+  padding: 0.55rem 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  transition: background-color 0.16s ease;
+}
+
+.btn-card-primary:hover {
+  background-color: var(--ucsur-navy-dark);
+}
+
+.btn-card-secondary {
+  appearance: none;
+  background-color: var(--bg-paper);
+  color: var(--ink-800);
+  border: 1px solid var(--line-strong);
+  padding: 0.55rem 0.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  transition: all 0.16s ease;
+}
+
+.btn-card-secondary:hover {
+  border-color: var(--ucsur-navy);
+  color: var(--ucsur-navy);
+  background-color: var(--ucsur-blue-tint);
+}
+
+/* ==========================================================================
+   9. MODALES INTERACTIVOS: LIGHTBOX CON ZOOM Y LECTOR DE WORD (.DOCX)
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background-color: rgba(4, 24, 56, 0.86);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal-window {
+  background-color: var(--bg-white);
+  border: 1px solid var(--line-strong);
+  border-top: 4px solid var(--ucsur-amber);
+  border-radius: var(--radius-xs);
+  width: 100%;
+  max-width: 1140px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-topbar {
+  background-color: var(--ucsur-navy);
+  color: #FFFFFF;
+  padding: 0.9rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.modal-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ucsur-amber);
+  font-weight: 700;
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.modal-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.modal-tool-btn {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.38rem 0.7rem;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.modal-tool-btn:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.modal-tool-btn.btn-amber {
+  background: var(--ucsur-amber);
+  border-color: var(--ucsur-amber);
+}
+
+.modal-viewport-image {
+  flex: 1;
+  background-color: #071120;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  min-height: 420px;
+}
+
+.lightbox-target-img {
+  max-width: 100%;
+  max-height: 74vh;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+}
+
+.modal-viewport-doc {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem 2.5rem;
+  background-color: var(--bg-paper);
+}
+
+.doc-sheet {
+  background-color: var(--bg-white);
+  border: 1px solid var(--line-strong);
+  padding: 2.25rem 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.doc-sheet h4 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--ucsur-navy);
+  margin: 1.5rem 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--ucsur-navy);
+}
+
+.doc-sheet h4:first-child {
+  margin-top: 0;
+}
+
+.doc-sheet p, .doc-sheet li {
+  font-family: var(--font-serif);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--ink-800);
+  margin-bottom: 0.7rem;
+}
+
+.doc-embedded-figure {
+  margin: 1.25rem 0;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-paper);
+  padding: 0.85rem;
+  border-radius: var(--radius-xs);
+}
+
+.doc-embedded-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line-subtle);
+}
+
+.doc-embedded-caption {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-600);
+}
+
+/* Buscador Global Modal (Ctrl+K) */
+.search-modal-window {
+  max-width: 680px;
+}
+
+.search-modal-body {
+  padding: 1.25rem;
+  background: var(--bg-white);
+}
+
+.global-search-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  border: 2px solid var(--ucsur-navy);
+  border-radius: var(--radius-xs);
+  margin-bottom: 1rem;
+}
+
+.search-results-list {
+  max-height: 360px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.search-result-item {
+  padding: 0.75rem 0.95rem;
+  background: var(--bg-paper);
+  border: 1px solid var(--line-subtle);
+  border-left: 3px solid var(--ucsur-navy);
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.search-result-item:hover {
+  background: var(--ucsur-blue-tint);
+}
+
+.search-result-sec {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ucsur-amber-hover);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search-result-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ink-900);
+}
+
+.search-result-snippet {
+  font-size: 0.78rem;
+  color: var(--ink-600);
+  margin-top: 0.15rem;
+}
+
+/* Notificación Toast de copiado APA */
+.editorial-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 4000;
+  background-color: var(--ucsur-navy-dark);
+  color: #FFFFFF;
+  border-left: 4px solid var(--ucsur-amber);
+  padding: 0.8rem 1.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 600;
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-md);
+  transform: translateY(120%);
+  opacity: 0;
+  transition: all 0.25s var(--ease-editorial);
+}
+
+.editorial-toast.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+

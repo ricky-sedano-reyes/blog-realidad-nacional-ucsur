@@ -1,0 +1,91 @@
+/* ==========================================================================
+   UNIVERSIDAD CIENTÍFICA DEL SUR (UCSUR) — SISTEMA DE DISEÑO EDITORIAL
+   Archivo: assets/css/variables.css
+   Curso: Análisis de la Realidad Nacional y Ambiental (Ciclo 2026-2)
+   Paleta cromática sincronizada con el logo oficial de la UCSUR
+   ========================================================================== */
+
+:root {
+  /* Colores Institucionales Universidad Científica del Sur (extraídos de logo-ucsur.png) */
+  --ucsur-navy: #0A387D;          /* Azul institucional exacto del logotipo UCSUR */
+  --ucsur-navy-dark: #062554;     /* Azul marino profundo para cabeceras y contraste */
+  --ucsur-navy-deep: #041838;     /* Tinta azul noche para fondos editoriales oscuros */
+  --ucsur-blue: #1454A8;          /* Azul académico secundario */
+  --ucsur-blue-mid: #2563EB;      /* Azul interactivo de enlaces y controles */
+  --ucsur-blue-tint: #EEF4FB;     /* Fondo azul hielo sutil para bloques técnicos */
+  --ucsur-blue-border: #C5D8F0;   /* Borde azul académico */
+
+  /* Acento Institucional Naranja/Ámbar ("DEL SUR" en logo oficial) */
+  --ucsur-amber: #E88320;         /* Naranja ocre exacto del isotipo UCSUR */
+  --ucsur-amber-hover: #CC6E12;   /* Estado activo/hover del acento */
+  --ucsur-amber-light: #FDF4EB;   /* Fondo cálido para llamadas de atención */
+  --ucsur-amber-border: #F5CFA6;  /* Borde ámbar sutil */
+
+  /* Acentos Temáticos de Ecorregiones (Sobrios, de revista científica) */
+  --eco-amazonia: #166534;        /* Verde bosque amazónico (Café y Cacao) */
+  --eco-amazonia-bg: #F0FDF4;
+  --eco-amazonia-border: #BBF7D0;
+  --eco-costa: #0369A1;           /* Azul hídrico costero (Arándano y Espárrago) */
+  --eco-costa-bg: #F0F9FF;
+  --eco-costa-border: #BAE6FD;
+  --eco-alerta: #B91C1C;          /* Rojo diagnóstico para estrés hídrico / deforestación */
+  --eco-alerta-bg: #FEF2F2;
+  --eco-alerta-border: #FECACA;
+
+  /* Superficies Editoriales (Inspirado en Nature / Distill / Stripe Press) */
+  --bg-paper: #FAF9F5;            /* Papel editorial cálido antirreflejo */
+  --bg-white: #FFFFFF;            /* Blanco puro para hojas de lectura y tarjetas */
+  --bg-subtle: #F2F4F8;           /* Gris pizarra muy claro para paneles de datos */
+  --bg-elevated: #FFFFFF;
+
+  /* Tintas y Jerarquía de Texto */
+  --ink-900: #0F172A;             /* Tinta principal de máximo contraste */
+  --ink-800: #1E293B;             /* Cuerpo de texto académico */
+  --ink-600: #475569;             /* Subtítulos, notas metodológicas y leyendas */
+  --ink-500: #64748B;             /* Metadatos y etiquetas secundarias */
+  --ink-400: #94A3B8;             /* Numeración decorativa */
+
+  /* Líneas Estructurales (Swiss Editorial Grid) */
+  --line-subtle: #E2E8F0;
+  --line-strong: #CBD5E1;
+  --line-institutional: rgba(10, 56, 125, 0.16);
+
+  /* Tipografía Académica y Técnica */
+  --font-serif: 'Newsreader', 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  /* Escala de Lectura Dinámica (ajustable por el usuario con A- / A+) */
+  --reading-scale: 1;
+  --reading-font-size: calc(1.0625rem * var(--reading-scale));
+  --reading-line-height: 1.82;
+
+  /* Dimensiones y Espaciado */
+  --container-max: 1360px;
+  --reading-max: 820px;
+  --header-height: 74px;
+  --topbar-height: 40px;
+
+  /* Radios y Sombras Sobrias (Sin efectos artificiales de IA) */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 2px 8px -2px rgba(10, 56, 125, 0.07), 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 8px 24px -4px rgba(10, 56, 125, 0.10), 0 2px 6px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 20px 40px -12px rgba(6, 37, 84, 0.18), 0 4px 12px rgba(15, 23, 42, 0.06);
+
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Modo Lectura Cálido (Sepia Académico opcional) */
+body.theme-sepia {
+  --bg-paper: #F4EFE6;
+  --bg-white: #FAF6EE;
+  --bg-subtle: #EAE3D5;
+  --line-subtle: #DCD3C2;
+  --line-strong: #C8BDA8;
+}
+
