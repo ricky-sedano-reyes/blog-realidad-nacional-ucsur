@@ -4,6 +4,7 @@
 **Asignatura:** Análisis de la Realidad Nacional y Ambiental (Ciclo 2026-2)  
 **Evaluación:** Evaluación Continua 1 (EC1) — Informe Académico, Panel de Análisis y Portafolio de Actividades  
 **Docente:** Prof. Giovanni Paolo Figari Salas  
+**Enlace Oficial del Blog:** https://blog-realidad-nacional-ucsur.netlify.app/  
 
 ---
 

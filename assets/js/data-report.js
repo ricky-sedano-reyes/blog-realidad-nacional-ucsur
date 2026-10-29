@@ -16,6 +16,7 @@ window.UCSUR_REPORT_DATA = {
     professor: "Giovanni Paolo Figari Salas",
     group: "Grupo 1",
     date: "Octubre 2026",
+    blogUrl: "https://blog-realidad-nacional-ucsur.netlify.app/",
     docxPath: "./TRABAJO_GRUPAL_Analisis_realidad_FINAL_v2.docx"
   },
 
