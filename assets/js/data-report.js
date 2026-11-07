@@ -288,7 +288,7 @@ window.UCSUR_REPORT_DATA = {
       sec: "Equipo",
       title: "Integrantes del Grupo 1 y Datos Académicos (UCSUR)",
       targetId: "sec-integrantes",
-      keywords: "integrantes autores grupo 1 garcía mori garcía valdera marchan rozand sedano vasquez universidad científica del sur"
+      keywords: "integrantes autores grupo 1 garcía mori garcía valdera marchan rozand sedano vasquez calle ruiz samanta universidad científica del sur"
     }
   ]
 };

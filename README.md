@@ -18,6 +18,7 @@
 | `100233029` | **Rozand Copara, Erick Enrique** |
 | `100228037` | **Sedano Reyes, Ricky Jhony** |
 | `100228809` | **Vasquez Morales, Milagros** |
+| `100002537` | **Calle Ruiz, Samanta Hilda** |
 
 ---
 
@@ -25,21 +26,32 @@
 
 ```text
 BLOG/
-├── index.html                          # Publicación principal (Informe Académico + Laboratorio de Datos)
-├── actividades.html                    # Entrada directa a la sección «Actividades en clase»
+├── index.html                          # Publicación principal (Informe Académico + Laboratorio de Datos + Actividades)
+├── actividades.html                    # Entrada directa a la sección «Actividades en clase» (18 evidencias)
 ├── styles.css                          # Hoja de estilos maestra (importa módulos CSS institucionales UCSUR)
 ├── app.js                              # Inicializador principal de la aplicación
 ├── logo-ucsur.png                      # Logotipo oficial de la Universidad Científica del Sur
 ├── netlify.toml                        # Configuración de despliegue continuo para Netlify
 ├── PROBLEMÁTICA DE LA AGROEXPORTACIÓN EN EL PERÚ - IMPACTO EN EL ÁMBITO SOCIOAMBIENTAL.docx # Informe oficial en formato Word (APA 7)
-├── actividades en clase/               # Carpeta oficial de evidencias (Semanas 1, 2 y 3)
-│   ├── Actividad en clase 1..docx
-│   ├── Guía 1.docx
-│   ├── EL COBRE - RECURSO NO RENOVABLE -  SEMANA 1.jpeg
-│   ├── INCENDIOS FORESTALES EN PERÚ - SEMANA 2.jpeg
-│   ├── OSO DE ANTEOJOS - SEMANA 2.jpeg
-│   ├── PARQUES NACIONALES DEL PERÚ -  SEMANA 2.jpeg
-│   └── extorcion en lima metropolitana- semana 3.jpeg
+├── actividades en clase/               # Portafolio completo de evidencias académicas (Semanas 1 a 5)
+│   ├── Actividad en clase 1..docx      # Semana 1 (Geopolítica y Tratados)
+│   ├── Guía 1.docx                     # Semana 1 (Ventajas Geopolíticas y Recursos)
+│   ├── EL COBRE - RECURSO NO RENOVABLE -  SEMANA 1.jpeg # Semana 1 (Infografía)
+│   ├── INCENDIOS FORESTALES EN PERÚ - SEMANA 2.jpeg     # Semana 2 (Infografía)
+│   ├── OSO DE ANTEOJOS - SEMANA 2.jpeg                  # Semana 2 (Infografía)
+│   ├── PARQUES NACIONALES DEL PERÚ -  SEMANA 2.jpeg     # Semana 2 (Infografía)
+│   ├── extorcion en lima metropolitana- semana 3.jpeg   # Semana 3 (Infografía)
+│   ├── CHOQUE DE PODERES Y DEGRADACIÓN INSTITUCIONAL EN EL PERÚ.docx # Semana 3 (Guía 3)
+│   ├── Choque de poderes en Perú.png                    # Semana 3 (Infografía Guía 3)
+│   ├── LA TOLERANCIA EN LA DEMOCRACIA.docx              # Semana 3 (Guía 3)
+│   ├── Infografía sobre tolerancia democrática en Perú.png # Semana 3 (Infografía Guía 3)
+│   ├── LA INTELIGENCIA ARTIFICIAL Y SU INCIDENCIA EN EL MERCADO LABORAL PERUANO.docx # Semana 4 (Guía 4)
+│   ├── IA y mercado laboral peruano.png                 # Semana 4 (Infografía Guía 4)
+│   ├── GUÍA 5 actividad 1.docx                         # Semana 5 (Guía 5 - Turismo Sostenible)
+│   ├── TURISMO SOSTENIBLE EN EL PERÚ - SEMANA 5.png     # Semana 5 (Infografía Guía 5)
+│   ├── POTENCIAL TURÍSTICO DEL PERÚ - SEMANA 5.png      # Semana 5 (Infografía Guía 5)
+│   ├── GUÍA 5 actividad 2.docx                         # Semana 5 (Guía 5 - Las Bambas)
+│   └── CONFLICTO DE LAS BAMBAS - LÍNEA DE TIEMPO - SEMANA 5.png # Semana 5 (Infografía Guía 5)
 └── assets/
     ├── css/
     │   ├── variables.css               # Paleta institucional UCSUR (#0A387D, #E88320) y tokens tipográficos
