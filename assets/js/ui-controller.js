@@ -523,6 +523,20 @@ window.UCSUR_UI_CONTROLLER = (function () {
       if (openTrigger) {
         e.preventDefault();
         openEvidenceById(openTrigger.getAttribute("data-open-evidence"));
+        return;
+      }
+      var lightboxImgTrigger = e.target.closest("[data-open-lightbox-img]");
+      if (lightboxImgTrigger) {
+        e.preventDefault();
+        var imgUrl = lightboxImgTrigger.getAttribute("data-open-lightbox-img");
+        var imgTitle = lightboxImgTrigger.getAttribute("data-img-title") || "Figura Académica";
+        var imgKicker = lightboxImgTrigger.getAttribute("data-img-kicker") || "Informe Académico EC1";
+        openImageLightbox({
+          title: imgTitle,
+          academicCategory: imgKicker,
+          relativePath: imgUrl,
+          fileName: "arbol-de-problemas-agroexportacion.png"
+        });
       }
     });
 

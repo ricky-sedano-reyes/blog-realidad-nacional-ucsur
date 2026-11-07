@@ -237,6 +237,12 @@ window.UCSUR_REPORT_DATA = {
       keywords: "introducción récord 12784 millones midagri 2024 agroexportación costa amazonía crecimiento económico sostenibilidad"
     },
     {
+      sec: "Figura 1",
+      title: "Figura 1: Árbol de Problemas de los Impactos Socioambientales (APA 7)",
+      targetId: "sec-arbol-problemas",
+      keywords: "figura 1 arbol de problemas causas directas indirectas efectos problema central consecuencias impacto socioambiental agroexportacion peru"
+    },
+    {
       sec: "Sección 2.1",
       title: "Descripción de la Problemática: Café, Cacao, Arándano y Espárrago",
       targetId: "sec-2-1",
