@@ -3,7 +3,7 @@
  * UNIVERSIDAD CIENTÍFICA DEL SUR (UCSUR) — CATÁLOGO DE «ACTIVIDADES EN CLASE»
  * Archivo: assets/js/data-activities.js
  * Asignatura: Análisis de la Realidad Nacional y Ambiental · Grupo 1
- * Ciclo 2026-2 · Evaluación Continua 1 (EC1) y Portafolio de Evidencias (Semanas 1 a 5)
+ * Ciclo 2026-2 · Evaluación Continua 1 (EC1), Evaluación Continua 2 (EC2) y Portafolio de Evidencias (Semanas 1 a 6)
  * ============================================================================
  */
 
@@ -732,5 +732,35 @@ window.UCSUR_ACTIVITIES_DATA = [
     fileSize: "Alta Resolución",
     summary: "Lámina cronológica sobre el conflicto minero en Cotabambas: hitos históricos (2004, 2014, 2015, 2016, 2017–2018, 2019, 2022), análisis de causas y consecuencias en el corredor vial, y propuestas para la gobernanza territorial.",
     tags: ["Las Bambas", "Línea de Tiempo", "Conflicto Minero", "Apurímac", "Semana 5"]
+  },
+  {
+    id: "la-oroya-semana-5-6",
+    title: "La Oroya: Un Conflicto, Dos Versiones – Contaminación, Responsabilidad y Reparación",
+    academicCategory: "Infografía de Análisis Socioambiental · Semana 5 y 6",
+    fileName: "La Oroya - Conflicto y Reparacion - Semana 5 y 6.jpeg",
+    relativePath: "./assets/img/la-oroya-conflicto-semana-5-6.jpeg",
+    previewThumbnail: "./assets/img/la-oroya-conflicto-semana-5-6.jpeg",
+    week: "semana-6",
+    weekLabel: "Semana 5 y 6",
+    format: "image",
+    formatBadge: "Infografía Académica",
+    fileSize: "Alta Resolución",
+    summary: "Infografía analítica sobre el conflicto socioambiental de La Oroya: contaminación por metales pesados, afectación a la salud de la población, responsabilidad empresarial, acuerdo de reparación de US$ 150 millones (2026) y reclamos aún sin resolver. Fuentes: SPDA, Actualidad Ambiental, Revista Economía.",
+    tags: ["La Oroya", "Conflicto Socioambiental", "Contaminación", "Salud Pública", "Semana 5 y 6"]
+  },
+  {
+    id: "agroexportacion-sostenibilidad-semana-5-6",
+    title: "Agroexportación en Perú: Crecimiento, Desafíos y Sostenibilidad – ODS y Propuestas de Acción",
+    academicCategory: "Infografía de Propuesta Socioambiental · Semana 5 y 6",
+    fileName: "Agroexportacion Crecimiento Desafios y Sostenibilidad - Semana 5 y 6.jpeg",
+    relativePath: "./assets/img/agroexportacion-sostenibilidad-semana-5-6.jpeg",
+    previewThumbnail: "./assets/img/agroexportacion-sostenibilidad-semana-5-6.jpeg",
+    week: "semana-6",
+    weekLabel: "Semana 5 y 6",
+    format: "image",
+    formatBadge: "Infografía Académica",
+    fileSize: "Alta Resolución",
+    summary: "Infografía sobre la agroexportación peruana: problema del descenso del acuífero en Ica (1.5 m/año), pérdida de 2 380 ha de bosque amazónico, ODS relacionados (6, 8, 12, 15), indicadores de avance, propuestas de acción (balance hídrico, fiscalización, recarga de acuíferos) y metas verificables a 2 años.",
+    tags: ["Agroexportación", "Sostenibilidad", "ODS", "Acuífero Ica", "Propuestas", "Semana 5 y 6"]
   }
 ];

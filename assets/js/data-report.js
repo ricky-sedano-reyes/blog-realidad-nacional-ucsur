@@ -12,12 +12,13 @@ window.UCSUR_REPORT_DATA = {
     university: "Universidad Científica del Sur",
     course: "Análisis de la Realidad Nacional y Ambiental",
     cycle: "Ciclo 2026-2",
-    evaluation: "Evaluación Continua 1 (EC1)",
+    evaluation: "Evaluación Continua 1 (EC1) y Evaluación Continua 2 (EC2)",
     professor: "Giovanni Paolo Figari Salas",
     group: "Grupo 1",
-    date: "Octubre 2026",
+    date: "Noviembre 2026",
     blogUrl: "https://blog-realidad-nacional-ucsur.netlify.app/",
-    docxPath: "./PROBLEMÁTICA DE LA AGROEXPORTACIÓN EN EL PERÚ - IMPACTO EN EL ÁMBITO SOCIOAMBIENTAL.docx"
+    docxPathEC1: "./PROBLEMÁTICA DE LA AGROEXPORTACIÓN EN EL PERÚ - IMPACTO EN EL ÁMBITO SOCIOAMBIENTAL.docx",
+    docxPathEC2: "./EC2.docx"
   },
 
   /* Datos para el Gráfico 1: Valor de Agroexportaciones por Rubro (US$ Millones) */
@@ -295,6 +296,12 @@ window.UCSUR_REPORT_DATA = {
       title: "Integrantes del Grupo 1 y Datos Académicos (UCSUR)",
       targetId: "sec-integrantes",
       keywords: "integrantes autores grupo 1 garcía mori garcía valdera marchan rozand sedano vasquez calle ruiz samanta universidad científica del sur"
+    },
+    {
+      sec: "EC2",
+      title: "Evaluación Continua 2 (EC2): Revisión de Antecedentes, Causas, Enfoque Teórico y Conclusiones",
+      targetId: "sec-ec2-informe",
+      keywords: "ec2 evaluación continua 2 antecedentes AGROIDEAS ley 31110 régimen laboral PSI riego causas políticas económicas sociales enfoque teórico desarrollo sostenible bienes comunes ostrom agroecología tittonell conclusiones"
     }
   ]
 };
