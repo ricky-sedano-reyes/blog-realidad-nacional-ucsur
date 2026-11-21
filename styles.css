@@ -11,7 +11,7 @@
    4. ./assets/css/responsive.css  -> Adaptabilidad mÃ³vil, tablet, escritorio e impresiÃ³n acadÃ©mica
    ========================================================================== */
 
-@import url('./assets/css/variables.css?v=20261120_v8');
-@import url('./assets/css/layout.css?v=20261120_v8');
-@import url('./assets/css/components.css?v=20261120_v8');
-@import url('./assets/css/responsive.css?v=20261120_v8');
+@import url('./assets/css/variables.css?v=20261120_v9');
+@import url('./assets/css/layout.css?v=20261120_v9');
+@import url('./assets/css/components.css?v=20261120_v9');
+@import url('./assets/css/responsive.css?v=20261120_v9');
