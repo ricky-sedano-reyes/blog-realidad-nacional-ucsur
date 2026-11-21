@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Arquitectura CSS Modular UCSUR -->
-  <link rel="stylesheet" href="./styles.css?v=20261120_v7">
+  <link rel="stylesheet" href="./styles.css?v=20261120_v8">
 </head>
 <body data-default-view="blog">
 
@@ -139,68 +139,100 @@
           </p>
         </div>
 
-        <div class="hero-meta-row">
-          <div class="hero-meta-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
+        <div class="masthead-action-row">
+          <a href="#sec-introduccion" class="btn-editorial-amber">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
             </svg>
-            <span><strong>Grupo 1:</strong> Calle Ruiz, García Mori, García Valdera, Marchan, Rozand, Sedano, Vasquez</span>
-          </div>
-          <div class="hero-meta-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
+            <span>Leer Informe EC2 Completo</span>
+          </a>
+          <button type="button" class="btn-editorial-primary" data-switch-view="actividades">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
             </svg>
-            <span>Noviembre 2026 · Ciclo 2026-2</span>
-          </div>
-          <div class="hero-meta-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
+            <span>Ver Actividades en Clase (20)</span>
+          </button>
+          <a href="#sec-integrantes" class="btn-editorial-outline">
+            <span>Ver Integrantes del Grupo</span>
+          </a>
+          <button type="button" class="btn-editorial-outline" id="btn-print-report">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
             </svg>
-            <span>Lectura Académica Completa · 12 min</span>
-          </div>
-        </div>
-
-        <!-- Barra de Métricas y KPIs de la Problemática (EC2) -->
-        <div class="kpi-metrics-grid">
-          <div class="kpi-card">
-            <div class="kpi-label">Inversión en Planes de Negocio</div>
-            <div class="kpi-value">S/ 1 240 M</div>
-            <div class="kpi-caption">> 2 600 planes ejecutados por AGROIDEAS desde 2010 (MIDAGRI, 2025).</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Familias Agricultoras Apoyadas</div>
-            <div class="kpi-value">97 400</div>
-            <div class="kpi-caption">Familias beneficiarias de compensaciones para la competitividad.</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Trabajadores Agrarios Capacitados</div>
-            <div class="kpi-value">36 248</div>
-            <div class="kpi-caption">184 asistencias técnicas en formalización y SST en 13 regiones (SUNAFIL, 2024).</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Superficie sin Riego Tecnificado</div>
-            <div class="kpi-value">87.4 %</div>
-            <div class="kpi-caption">Brecha crítica de infraestructura agrícola en el Perú (MEF, 2025b).</div>
-          </div>
+            <span>Imprimir / PDF</span>
+          </button>
         </div>
 
       </div>
     </section>
 
-    <!-- Contenedor Principal: Barra Lateral (TOC) y Columna del Manuscrito -->
-    <div class="editorial-container">
+    <!-- Cinta de Indicadores Clave del Informe (EC2) -->
+    <div class="kpi-strip-wrapper">
+      <div class="kpi-editorial-strip" aria-label="Indicadores estadísticos principales de EC2">
+        <div class="kpi-cell">
+          <div>
+            <div class="kpi-cell-top">
+              <span class="kpi-category">AGROIDEAS · MIDAGRI</span>
+              <span class="kpi-trend-tag kpi-trend-up">> 2 600 planes</span>
+            </div>
+            <div class="kpi-figure">S/ 1 240 M</div>
+            <div class="kpi-caption">Inversión ejecutada en planes de negocio para pequeños y medianos productores.</div>
+          </div>
+          <div class="kpi-source-ref">Fuente: MIDAGRI (2025)</div>
+        </div>
 
-      <!-- Barra Lateral Pegajosa: Tabla de Contenidos Interactiva -->
-      <aside class="sidebar-column">
-        <div class="table-of-contents" id="manuscript-toc">
-          <div class="toc-header">
-            <span class="toc-eyebrow">Estructura del Informe EC2</span>
-            <h3 class="toc-heading">Tabla de Contenidos</h3>
+        <div class="kpi-cell">
+          <div>
+            <div class="kpi-cell-top">
+              <span class="kpi-category">Agricultura Familiar</span>
+              <span class="kpi-trend-tag kpi-trend-up">Nacional</span>
+            </div>
+            <div class="kpi-figure">97 400</div>
+            <div class="kpi-caption">Familias beneficiadas con financiamiento, tecnología y gestión empresarial.</div>
+          </div>
+          <div class="kpi-source-ref">Fuente: MIDAGRI (2025) · MEF (2025a)</div>
+        </div>
+
+        <div class="kpi-cell">
+          <div>
+            <div class="kpi-cell-top">
+              <span class="kpi-category">Fiscalización Laboral</span>
+              <span class="kpi-trend-tag kpi-trend-amber">184 asistencias</span>
+            </div>
+            <div class="kpi-figure">36 248</div>
+            <div class="kpi-caption">Trabajadores agrarios asistidos en formalización, jornada y SST en 13 regiones.</div>
+          </div>
+          <div class="kpi-source-ref">Fuente: SUNAFIL (2024)</div>
+        </div>
+
+        <div class="kpi-cell">
+          <div>
+            <div class="kpi-cell-top">
+              <span class="kpi-category">Brecha de Riego</span>
+              <span class="kpi-trend-tag kpi-trend-alert">Crítico</span>
+            </div>
+            <div class="kpi-figure">87.4 %</div>
+            <div class="kpi-caption">Superficie agrícola sin riego tecnificado; 56.6 % de sistemas operan inadecuadamente.</div>
+          </div>
+          <div class="kpi-source-ref">Fuente: MEF (2025b)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Área de Trabajo Académico: Índice Lateral Sticky + Columna de Manuscrito -->
+    <div class="academic-workspace">
+
+      <!-- Barra Lateral: Índice de Contenidos y Accesos Directos -->
+      <aside class="toc-sidebar" aria-label="Índice del informe académico">
+        <div class="toc-panel">
+          <div class="toc-panel-header">
+            <span class="toc-panel-title">Índice General</span>
+            <span class="toc-progress-pct" id="toc-progress-pct">0% leído</span>
           </div>
           <ul class="toc-list" id="toc-list">
             <li><a href="#sec-introduccion" class="toc-link active"><span class="toc-num">1.</span><span>Introducción a la problemática</span></a></li>
@@ -236,28 +268,20 @@
             Revisa las infografías de investigación y los documentos colaborativos desarrollados durante las sesiones del curso (Semanas 1 a 6).
           </p>
           <button type="button" class="sidebar-callout-btn" data-switch-view="actividades">
-            <span>Ver 20 Actividades en Clase</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
+            <span>Abrir «Actividades en clase»</span>
+            <span>→</span>
           </button>
         </div>
 
         <!-- Tarjeta de Descarga del Documento Word EC2 -->
-        <div class="sidebar-callout-card sidebar-download-card">
-          <div class="sidebar-callout-kicker">Documento Original</div>
+        <div class="sidebar-callout-card">
+          <div class="sidebar-callout-kicker">Documento Oficial</div>
           <h3 class="sidebar-callout-title">Informe EC2 en Word (.docx)</h3>
           <p class="sidebar-callout-desc">
             Descarga el archivo oficial con la investigación completa en formato Word editable.
           </p>
-          <a href="./EC2.docx" download="EC2.docx" class="sidebar-callout-btn sidebar-btn-amber">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            <span>Descargar EC2.docx</span>
+          <a href="./EC2.docx" download="EC2.docx" class="sidebar-callout-btn" style="background:var(--ucsur-amber);color:white;border-color:var(--ucsur-amber);display:flex;align-items:center;justify-content:center;gap:0.5rem;text-decoration:none;font-weight:700;">
+            <span>⬇ Descargar EC2.docx</span>
           </a>
         </div>
       </aside>
@@ -378,16 +402,16 @@
                 Según el <strong>MIDAGRI (2025)</strong>, desde el año 2010, AGROIDEAS ejecutó <strong>más de 2 600 planes de negocio</strong>, con una inversión superior a <strong>S/ 1 240 millones</strong>, beneficiando a aproximadamente <strong>97 400 familias agricultoras</strong> a nivel nacional.
               </p>
               <p>
-                Además, una evaluación independiente del <strong>Ministerio de Economía y Finanzas (MEF, 2025a)</strong> encontró mejoras productivas importantes en cadenas específicas como el café y la crianza de cuyes. Sin embargo, dicha evaluación <em>no encontró evidencia de impactos considerables en los ingresos totales de los hogares beneficiarios</em>.
+                Además, una evaluación del <strong>Ministerio de Economía y Finanzas (MEF, 2025a)</strong> encontró mejoras productivas importantes en las cadenas de café y crianza de cuyes. Sin embargo, no encontró evidencia de impactos considerables en los ingresos totales de los hogares beneficiarios.
               </p>
 
               <h4>d. Lecciones aprendidas y limitaciones</h4>
               <p>
-                Aunque el programa ha contribuido a fortalecer la pequeña agricultura, sus resultados demuestran que entregar financiamiento y tecnología no garantiza por sí solo una mejora significativa y sostenible de los ingresos. También se requiere facilitar el acceso real a mercados competitivos, consolidar la organización interna de los productores y brindar un acompañamiento técnico continuo durante todas las fases de comercialización.
+                Aunque el programa ha contribuido a fortalecer la pequeña agricultura, sus resultados muestran que entregar financiamiento y tecnología no garantiza por sí solo una mejora significativa de los ingresos. También se necesita facilitar el acceso a mercados, fortalecer la organización de los productores y brindar acompañamiento técnico continuo.
               </p>
 
               <div class="analysis-callout-box" style="background:var(--bg-paper);border:1px solid var(--line-strong);border-left:4px solid var(--ucsur-amber);padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin-top:1.25rem;">
-                <strong style="color:var(--ucsur-navy);">Análisis Crítico del Grupo:</strong> AGROIDEAS representa un intento valioso de reducir las brechas entre los pequeños productores y las empresas agrícolas con mayor capacidad económica, aunque no resuelve directamente todos los impactos ambientales derivados de la expansión agroexportadora.
+                <strong style="color:var(--ucsur-navy);">Análisis Crítico del Grupo:</strong> AGROIDEAS representa un intento de reducir las brechas entre pequeños productores y empresas agrícolas con mayor capacidad económica, aunque no resuelve directamente todos los impactos ambientales de la agroexportación.
               </div>
             </div>
           </article>
@@ -402,33 +426,33 @@
             <div class="article-body prose">
               <div class="info-meta-card" style="background:#EEF4FB;border-left:4px solid var(--ucsur-navy);padding:0.85rem 1.15rem;margin-bottom:1.25rem;border-radius:0 4px 4px 0;">
                 <p style="margin:0;font-size:0.9rem;">
-                  <strong>Institución responsable:</strong> Estado peruano, Congreso de la República, Ministerio de Trabajo y Promoción del Empleo (MTPE) y SUNAFIL.<br>
+                  <strong>Institución responsable:</strong> Estado peruano, Congreso de la República y Ministerio de Trabajo y Promoción del Empleo (MTPE).<br>
                   <strong>Aprobación:</strong> 31 de diciembre de 2020. <strong>Ámbito:</strong> Sector agrario, agroexportador y agroindustrial.
                 </p>
               </div>
 
               <h4>a. ¿En qué consistió la propuesta?</h4>
               <p>
-                La Ley N.º 31110 se aprobó con el propósito de fortalecer el sector agrario y garantizar los derechos laborales fundamentales de sus trabajadores. La norma estableció disposiciones expresas sobre remuneraciones mínimas (Bono Especial por Trabajo Agrario - BETA), condiciones dignas y seguras de trabajo, cobertura de protección social en salud (EsSalud) y participación en las utilidades de las empresas agroexportadoras.
+                La Ley N.º 31110 se aprobó para fortalecer el sector agrario y garantizar los derechos laborales de sus trabajadores. Estableció disposiciones sobre remuneraciones, condiciones dignas y seguras de trabajo, protección social y participación en las utilidades de las empresas.
               </p>
 
               <h4>b. ¿Quiénes propusieron e implementaron esta solución?</h4>
               <p>
-                El Congreso de la República aprobó la ley tras las movilizaciones agrarias de fines de 2020. El Poder Ejecutivo, a través del MTPE y los sectores correspondientes, participa en su reglamentación y cumplimiento, mientras que la <strong>Superintendencia Nacional de Fiscalización Laboral (SUNAFIL)</strong> tiene a su cargo la inspección y fiscalización laboral.
+                El Congreso de la República aprobó la ley y el Poder Ejecutivo, mediante el MTPE y otras instituciones, participa en su reglamentación y cumplimiento. La SUNAFIL tiene a su cargo la fiscalización laboral.
               </p>
 
               <h4>c. Resultados obtenidos</h4>
               <p>
-                De acuerdo con la <strong>SUNAFIL (2024)</strong>, durante ese año se llevaron a cabo <strong>184 asistencias técnicas en 13 regiones</strong> del país, beneficiando a <strong>36 248 trabajadores</strong> del sector agrario. Durante estas jornadas se abordaron aspectos clave como el cálculo de remuneraciones, jornadas máximas de trabajo, descansos remunerados, formalización de contratos y normas de seguridad y salud en el trabajo (SST).
+                Según la <strong>SUNAFIL (2024)</strong>, durante ese año se realizaron <strong>184 asistencias técnicas en 13 regiones del país</strong>, beneficiando a <strong>36 248 trabajadores</strong> del sector agrario. Se abordaron temas como remuneraciones, jornadas laborales, descansos, formalización y seguridad en el trabajo.
               </p>
 
               <h4>d. Lecciones aprendidas y limitaciones</h4>
               <p>
-                La promulgación de un marco legal representa un avance formal indiscutible para la protección de los derechos laborales; sin embargo, su efectividad real exige una fiscalización permanente, inspectores suficientes en campo y un compromiso auténtico del empresariado agrario. Es imperativo consolidar la formalización laboral para impedir que los derechos reconocidos queden únicamente consignados en el papel.
+                La aprobación de una ley representa un avance para proteger los derechos laborales; sin embargo, su cumplimiento requiere una fiscalización constante, recursos suficientes y compromiso de las empresas. También es necesario fortalecer la formalización de los trabajadores y evitar que las normas queden solamente en el papel.
               </p>
 
               <div class="analysis-callout-box" style="background:var(--bg-paper);border:1px solid var(--line-strong);border-left:4px solid var(--ucsur-amber);padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin-top:1.25rem;">
-                <strong style="color:var(--ucsur-navy);">Análisis Crítico del Grupo:</strong> Esta propuesta busca enfrentar las graves asimetrías sociales de la agroexportación, en particular la informalidad y la precariedad de las condiciones laborales. Si bien evidencia avances normativos y asistenciales, subsiste la urgencia de dotar de mayores recursos a la supervisión inspectiva en zonas rurales apartadas.
+                <strong style="color:var(--ucsur-navy);">Análisis Crítico del Grupo:</strong> Esta propuesta busca enfrentar los problemas sociales de la agroexportación, especialmente la informalidad laboral y las condiciones de trabajo. Sus resultados muestran avances, pero todavía es necesario fortalecer la supervisión y el cumplimiento de los derechos laborales.
               </div>
             </div>
           </article>
@@ -443,39 +467,39 @@
             <div class="article-body prose">
               <div class="info-meta-card" style="background:#EEF4FB;border-left:4px solid var(--ucsur-navy);padding:0.85rem 1.15rem;margin-bottom:1.25rem;border-radius:0 4px 4px 0;">
                 <p style="margin:0;font-size:0.9rem;">
-                  <strong>Institución responsable:</strong> Ministerio de Desarrollo Agrario y Riego (MIDAGRI), a través del Programa Subsectorial de Irrigaciones (PSI).<br>
+                  <strong>Institución responsable:</strong> Ministerio de Desarrollo Agrario y Riego (MIDAGRI), mediante el Programa Subsectorial de Irrigaciones (PSI).<br>
                   <strong>Inicio del PSI:</strong> 1998. <strong>Ámbito:</strong> Costa, sierra y selva del Perú.
                 </p>
               </div>
 
               <h4>a. ¿En qué consistió la propuesta?</h4>
               <p>
-                El Programa Subsectorial de Irrigaciones impulsó la tecnificación y modernización integral de los sistemas de riego parcelario mediante la implementación de infraestructura de riego presurizado por goteo y aspersión, con el objetivo de elevar la eficiencia en el uso del agua y potenciar la productividad agrícola.
+                El Programa Subsectorial de Irrigaciones promovió la modernización de los sistemas de riego mediante la instalación de tecnologías como el riego por goteo y aspersión, buscando mejorar el aprovechamiento del agua y la productividad agrícola.
               </p>
 
               <h4>b. ¿Quiénes propusieron e implementaron esta solución?</h4>
               <p>
-                El Estado peruano mediante el MIDAGRI y el PSI, articulando esfuerzos con las Juntas y Comisiones de Usuarios de Agua y los comités de regantes beneficiarios.
+                El Estado peruano, a través del MIDAGRI y el PSI, con participación de organizaciones de usuarios de agua y agricultores beneficiarios.
               </p>
 
               <h4>c. Resultados obtenidos</h4>
               <p>
-                De acuerdo con el informe oficial del <strong>PSI (2024)</strong>, entre 1999 y 2017 se ejecutaron <strong>680 proyectos de riego tecnificado</strong> que beneficiaron directamente a <strong>10 497 agricultores</strong> a escala nacional.
+                De acuerdo con el <strong>PSI (2024)</strong>, entre 1999 y 2017 se ejecutaron <strong>680 proyectos de riego tecnificado</strong> que beneficiaron a <strong>10 497 agricultores</strong> a nivel nacional.
               </p>
               <p>
-                Asimismo, el subproyecto específico <em>PSI Sierra (2011–2016)</em> favoreció a <strong>1 684 agricultores</strong> y permitió tecnificar el riego en <strong>1 969 hectáreas agrícolas</strong> en zonas altoandinas de alta vulnerabilidad.
+                Asimismo, el proyecto <em>PSI Sierra (2011-2016)</em> benefició a <strong>1 684 agricultores</strong> y permitió implementar sistemas de riego tecnificado en <strong>1 969 hectáreas agrícolas</strong>.
               </p>
 
               <h4>d. Lecciones aprendidas y limitaciones</h4>
               <p>
-                Entre las mayores dificultades detectadas destacaron la insuficiente capacitación técnica a los regantes para la operación y mantenimiento continuo de los cabezales de riego, la escasa difusión de los proyectos en comunidades alejadas y la ausencia de acompañamiento agronómico durante las sucesivas campañas agrícolas.
+                Entre las principales dificultades identificadas estuvieron la necesidad de mayor capacitación para operar y mantener los sistemas de riego, la falta de difusión de los proyectos y la necesidad de acompañar a los agricultores durante sus campañas agrícolas.
               </p>
               <p>
-                Por consiguiente, se comprueba que no basta con suministrar bombas y mangueras: resulta imprescindible afianzar la capacitación operativa, el fondo de mantenimiento y la gobernanza comunitaria de los usuarios de riego.
+                Por ello, no basta con instalar equipos: también se necesita capacitación, mantenimiento y organización de los usuarios del agua.
               </p>
 
               <div class="analysis-callout-box" style="background:var(--bg-paper);border:1px solid var(--line-strong);border-left:4px solid var(--ucsur-amber);padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin-top:1.25rem;">
-                <strong style="color:var(--ucsur-navy);">Análisis Crítico del Grupo:</strong> La tecnificación constituye una herramienta fundamental frente a la escasez hídrica; sin embargo, su cobertura debe ampliarse y democratizarse para que la eficiencia en el uso del agua no sea patrimonio exclusivo de las grandes corporaciones agroindustriales.
+                <strong style="color:var(--ucsur-navy);">Análisis Crítico del Grupo:</strong> Esta propuesta contribuye a enfrentar la presión sobre los recursos hídricos, aunque su alcance debe ampliarse para conseguir una gestión más eficiente y equitativa del agua en las zonas agrícolas.
               </div>
             </div>
           </article>
@@ -489,12 +513,12 @@
 
             <div class="article-body prose">
               <p>
-                La siguiente matriz comparativa (Tabla 1) permite contrastar qué aspecto central de la problemática socioambiental de la agroexportación aborda cada una de las experiencias estatales analizadas, así como sintetizar su principal aprendizaje institucional.
+                Esta tabla permite identificar qué aspecto de nuestra problemática aborda cada experiencia y cuál es su principal aprendizaje.
               </p>
 
               <div class="apa-table-wrapper" style="margin:1.5rem 0;">
                 <div class="apa-table-caption" style="font-size:0.85rem;margin-bottom:0.5rem;color:var(--ink-800);">
-                  <strong>Tabla 1.</strong> <em>Comparación entre las tres propuestas previas de solución</em>
+                  <strong>Tabla 1.</strong> <em>Comparación de las tres propuestas</em>
                 </div>
                 <div class="apa-table-scroll">
                   <table class="apa-table" style="min-width:600px;width:100%;">
@@ -509,23 +533,23 @@
                       <tr>
                         <td><strong>AGROIDEAS</strong></td>
                         <td>Desigualdad entre productores</td>
-                        <td>El financiamiento necesita acompañamiento técnico y acceso a mercados.</td>
+                        <td>El financiamiento necesita acompañamiento y acceso a mercados.</td>
                       </tr>
                       <tr>
                         <td><strong>Ley N.º 31110</strong></td>
                         <td>Condiciones laborales</td>
-                        <td>Las leyes necesitan fiscalización y cumplimiento efectivo en campo.</td>
+                        <td>Las leyes necesitan fiscalización y cumplimiento efectivo.</td>
                       </tr>
                       <tr>
-                        <td><strong>Tecnificación del riego (PSI)</strong></td>
-                        <td>Uso del agua y eficiencia hídrica</td>
-                        <td>La tecnología requiere capacitación técnica y sostenibilidad en el mantenimiento.</td>
+                        <td><strong>Tecnificación del riego</strong></td>
+                        <td>Uso del agua</td>
+                        <td>La tecnología requiere capacitación y mantenimiento.</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <div class="apa-table-note" style="font-size:0.8rem;color:var(--ink-600);margin-top:0.4rem;font-style:italic;">
-                  <em>Nota:</em> Elaboración propia del Grupo 1 a partir de las memorias de gestión de MIDAGRI (2025), SUNAFIL (2024) y PSI (2024).
+                  <em>Nota:</em> Datos tomados de las tres propuestas de solución analizadas en el informe EC2.
                 </div>
               </div>
             </div>
@@ -548,7 +572,7 @@
 
           <article class="manuscript-article">
             <div class="article-lead-paragraph">
-              En este apartado analizaremos por qué las propuestas de solución revisadas no han logrado resolver completamente los impactos socioambientales de la expansión de la agroexportación en el Perú. Es indispensable reconocer los avances alcanzados, identificando con rigor autocrítico los obstáculos estructurales que restringen su impacto.
+              En este apartado analizaremos por qué las propuestas de solución revisadas no han logrado resolver completamente los impactos socioambientales de la expansión de la agroexportación en el Perú. Es importante reconocer que estas iniciativas han conseguido avances; sin embargo, todavía existen obstáculos que limitan sus resultados.
             </div>
 
             <div class="article-body prose">
@@ -559,24 +583,24 @@
                   3.1. Causas políticas
                 </h3>
                 <p>
-                  Las principales dificultades políticas residen en la débil coordinación entre los tres niveles de gobierno, la insuficiente fiscalización y la carencia de continuidad en las políticas agrarias de largo plazo:
+                  Las principales dificultades políticas están relacionadas con la limitada coordinación entre las instituciones del Estado, la insuficiente fiscalización y la falta de continuidad en algunas políticas públicas:
                 </p>
                 <ul>
                   <li>
-                    <strong>Débil coordinación institucional:</strong> Las entidades nacionales (MIDAGRI, MINAM, MTPE), los Gobiernos Regionales y las municipalidades operan de manera fragmentada, sin una articulación intersectorial efectiva frente a los conflictos socioambientales.
+                    <strong>Débil coordinación institucional:</strong> Las entidades nacionales, regionales y municipales no siempre trabajan de manera articulada para atender los problemas agrarios y ambientales.
                   </li>
                   <li>
-                    <strong>Evidencia OCDE (2026):</strong> La Organización para la Cooperación y el Desarrollo Económicos señala de manera explícita que la fragmentación institucional y la limitada capacidad de supervisión estatal restringen severamente la aplicación efectiva de las políticas agrarias en el Perú.
+                    <strong>Diagnóstico OCDE (2026):</strong> La OCDE señala que la coordinación fragmentada entre las instituciones públicas y las limitaciones en la capacidad de supervisión dificultan la aplicación efectiva de las políticas agrícolas en el Perú.
                   </li>
                   <li>
-                    <strong>Fiscalización insuficiente:</strong> Persisten graves limitaciones logísticas y presupuestales para auditar las infracciones ambientales (sobreexplotación hídrica y deforestación) y laborales (contratación precaria e intermediación informal).
+                    <strong>Fiscalización insuficiente:</strong> Existen dificultades para supervisar el cumplimiento de las normas ambientales y laborales.
                   </li>
                   <li>
-                    <strong>Limitaciones en la gestión pública:</strong> Los programas gubernamentales suelen adolecer de falta de presupuesto sostenido, alta rotación de funcionarios y escaso seguimiento de metas plurianuales.
+                    <strong>Limitaciones en la gestión pública:</strong> Algunos programas no cuentan con los recursos ni el seguimiento necesarios para alcanzar sus objetivos.
                   </li>
                 </ul>
                 <div class="key-takeaway-card" style="background:#FBF6EE;border-left:4px solid var(--ucsur-amber);padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin:1rem 0 2rem 0;">
-                  <strong style="color:var(--ink-900);">Aprendizaje clave político:</strong> Es perentorio robustecer la coordinación interinstitucional y dotar de capacidades reales y autonomía a las entidades fiscalizadoras para garantizar soluciones con impacto perdurable.
+                  <strong style="color:var(--ink-900);">Aprendizaje clave:</strong> Es necesario fortalecer la coordinación entre las instituciones públicas y garantizar una fiscalización efectiva para que las propuestas de solución produzcan resultados sostenibles.
                 </div>
               </div>
 
@@ -586,21 +610,24 @@
                   3.2. Causas económicas
                 </h3>
                 <p>
-                  Las barreras económicas se derivan de la profunda desigualdad en el acceso al capital, la tecnología y las cadenas internacionales de valor:
+                  Las dificultades económicas se relacionan principalmente con la desigualdad en el acceso a recursos, tecnología y oportunidades de desarrollo agrícola:
                 </p>
                 <ul>
                   <li>
-                    <strong>Falta de financiamiento formal:</strong> La banca comercial excluye masivamente a la agricultura familiar; las elevadas tasas de interés y los rigurosos requisitos de titulación impiden a los pequeños productores acceder a créditos de reconversión.
+                    <strong>Falta de financiamiento:</strong> Los pequeños agricultores tienen dificultades para acceder a créditos e inversiones que permitan mejorar su producción.
                   </li>
                   <li>
-                    <strong>Brechas tecnológicas estructurales:</strong> Según el diagnóstico oficial de cierre de brechas del <strong>Ministerio de Economía y Finanzas (MEF, 2025b)</strong>, el <strong>87,4 % de la superficie agrícola del Perú carece de riego tecnificado</strong>, y el <strong>56,6 % de los sistemas de riego existentes operan en condiciones inadecuadas</strong>.
+                    <strong>Brechas tecnológicas:</strong> Muchos productores todavía no cuentan con sistemas modernos de riego ni infraestructura adecuada.
                   </li>
                   <li>
-                    <strong>Desigualdad y asimetría de mercado:</strong> Las corporaciones agroexportadoras gozan de economía de escala, financiamiento internacional barato y logística de frío integrada, mientras que el minifundio agrario vende su cosecha a intermediarios locales a precios mínimos de subsistencia.
+                    <strong>Desigualdad económica:</strong> Las grandes empresas agroexportadoras tienen mayores posibilidades de inversión y acceso a mercados internacionales que los pequeños productores.
+                  </li>
+                  <li>
+                    <strong>Diagnóstico MEF (2025b):</strong> Según el Ministerio de Economía y Finanzas, el <strong>87,4 % de la superficie agrícola del país no contaba con riego tecnificado</strong>, mientras que el <strong>56,6 % de los sistemas de riego operaba en condiciones inadecuadas</strong>, según el diagnóstico de brechas correspondiente a 2024.
                   </li>
                 </ul>
                 <div class="key-takeaway-card" style="background:#FBF6EE;border-left:4px solid var(--ucsur-amber);padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin:1rem 0 2rem 0;">
-                  <strong style="color:var(--ink-900);">Aprendizaje clave económico:</strong> Se demanda una inversión pública masiva en infraestructura hídrica, líneas de crédito blandas y transferencia tecnológica para cerrar la brecha entre la gran agroindustria y los pequeños agricultores.
+                  <strong style="color:var(--ink-900);">Aprendizaje clave:</strong> Se necesita una mayor inversión en infraestructura agrícola, tecnología y financiamiento para reducir las desigualdades entre los productores y mejorar el aprovechamiento de los recursos naturales.
                 </div>
               </div>
 
@@ -610,21 +637,24 @@
                   3.3. Causas sociales
                 </h3>
                 <p>
-                  Las condiciones de vida y el bienestar humano en las zonas agrarias determinan la sostenibilidad social del modelo:
+                  Las causas sociales están relacionadas con las condiciones de vida y trabajo de las personas que participan en la actividad agroexportadora, así como con las desigualdades que afectan a las comunidades agrícolas:
                 </p>
                 <ul>
                   <li>
-                    <strong>Informalidad laboral y precarización:</strong> Gran parte de los trabajadores agrícolas de temporada experimentan inestabilidad laboral, intermediación mediante "enganchadores" y carencia de derechos previsionales.
+                    <strong>Informalidad laboral:</strong> Algunos trabajadores agrícolas todavía enfrentan dificultades para acceder a empleos formales y beneficios laborales.
                   </li>
                   <li>
-                    <strong>Desigualdad distributiva:</strong> El dinámico crecimiento del PBI agroexportador no se traduce proporcionalmente en mejores servicios de salud, educación y saneamiento básico para las comunidades rurales donde se ubican los fundos.
+                    <strong>Desigualdad social:</strong> Los pequeños agricultores y las comunidades rurales no siempre reciben los mismos beneficios del crecimiento agroexportador.
                   </li>
                   <li>
-                    <strong>Conflictividad por el agua y estrés hídrico:</strong> Conforme advierte la <strong>OCDE (2026)</strong>, la concentración de población y de agricultura de exportación en la costa árida provoca un estrés hídrico agudo, desatando tensiones entre corporaciones agroindustriales, pequeños regantes y centros urbanos por el acceso al recurso hídrico.
+                    <strong>Conflictos por el agua:</strong> La competencia por los recursos hídricos puede generar tensiones entre las empresas agrícolas, los pequeños productores y la población local.
+                  </li>
+                  <li>
+                    <strong>Estrés hídrico según OCDE (2026):</strong> La concentración de población y de actividades agrícolas orientadas a la exportación en la costa peruana contribuye a generar elevados niveles de estrés hídrico, debido a la limitada disponibilidad de agua en esta región.
                   </li>
                 </ul>
                 <div class="key-takeaway-card" style="background:#FBF6EE;border-left:4px solid var(--ucsur-amber);padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin:1rem 0 2rem 0;">
-                  <strong style="color:var(--ink-900);">Aprendizaje clave social:</strong> Es impostergable asegurar trabajo decente, democratizar los beneficios del comercio exterior e instaurar una gestión hídrica justa que anteponga el consumo humano y las demandas comunales.
+                  <strong style="color:var(--ink-900);">Aprendizaje clave:</strong> Es necesario promover condiciones laborales dignas, una distribución más equitativa de las oportunidades y una gestión del agua que considere las necesidades de las comunidades y los agricultores.
                 </div>
               </div>
 
@@ -634,39 +664,39 @@
                   3.4. Principales obstáculos identificados
                 </h3>
                 <p>
-                  Sintetizando la investigación de las tres iniciativas estatales previas, la Tabla 2 individualiza el cuello de botella decisivo en cada ámbito:
+                  A partir de las tres propuestas investigadas, podemos resumir los obstáculos de la siguiente manera:
                 </p>
 
                 <div class="apa-table-wrapper" style="margin:1.5rem 0;">
                   <div class="apa-table-caption" style="font-size:0.85rem;margin-bottom:0.5rem;color:var(--ink-800);">
-                    <strong>Tabla 2.</strong> <em>Principales obstáculos identificados en las propuestas de solución</em>
+                    <strong>Tabla 2.</strong> <em>Principales obstáculos identificados</em>
                   </div>
                   <div class="apa-table-scroll">
                     <table class="apa-table" style="min-width:550px;width:100%;">
                       <thead>
                         <tr>
                           <th style="width:30%;">Propuesta</th>
-                          <th style="width:70%;">Principal obstáculo identificado</th>
+                          <th style="width:70%;">Principal obstáculo</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td><strong>AGROIDEAS</strong></td>
-                          <td>Limitado acceso de los pequeños productores a financiamiento continuo, tecnología de punta y canales de comercialización internacional directa.</td>
+                          <td>Limitado acceso de pequeños productores a financiamiento, tecnología y mercados.</td>
                         </tr>
                         <tr>
                           <td><strong>Ley N.º 31110</strong></td>
-                          <td>Dificultades operativas para garantizar la fiscalización inspectiva y el cumplimiento irrestricto de los derechos laborales en zonas rurales desconcentradas.</td>
+                          <td>Dificultades para garantizar el cumplimiento de los derechos laborales.</td>
                         </tr>
                         <tr>
-                          <td><strong>Tecnificación del riego (PSI)</strong></td>
-                          <td>Déficit de infraestructura complementaria, deficiente capacitación a regantes para la operación de equipos y carencia de fondos para mantenimiento preventivo.</td>
+                          <td><strong>Tecnificación del riego</strong></td>
+                          <td>Falta de infraestructura, capacitación y mantenimiento de los sistemas de riego.</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                   <div class="apa-table-note" style="font-size:0.8rem;color:var(--ink-600);margin-top:0.4rem;font-style:italic;">
-                    <em>Nota:</em> Elaboración del Grupo 1 con base en MEF (2025a), SUNAFIL (2024) y PSI (2024).
+                    <em>Nota:</em> Resumen de los obstáculos analizados a partir de las propuestas revisadas.
                   </div>
                 </div>
               </div>
@@ -677,10 +707,13 @@
                   3.5. Reflexión general: aprendizajes clave
                 </h3>
                 <p>
-                  El examen integral de las tres experiencias conduce a una convicción ineludible: <em>las soluciones a los desafíos agroexportadores requieren continuidad presupuestal, voluntad política de largo plazo, coordinación interinstitucional estrecha y participación vinculante de las comunidades beneficiarias</em>.
+                  El análisis de las tres experiencias permite comprender que las propuestas de solución necesitan continuidad, recursos económicos, coordinación institucional y participación de los beneficiarios.
                 </p>
                 <p>
-                  Aunque AGROIDEAS ha respaldado a decenas de miles de parceleros, la Ley N.º 31110 fijó pisos de protección social y el PSI tecnificó miles de hectáreas, los problemas de fondo —estrés hídrico, desigualdad y precarización— persisten. Por ende, el desafío futuro radica en consolidar políticas públicas integradas que concilien el dinamismo exportador con la conservación irrenunciable de los bienes naturales y la calidad de vida de las poblaciones agrícolas.
+                  Aunque AGROIDEAS ha contribuido al fortalecimiento de pequeños productores, la Ley N.º 31110 ha establecido mecanismos de protección laboral y la tecnificación del riego busca mejorar el aprovechamiento del agua, sus resultados todavía presentan limitaciones.
+                </p>
+                <p>
+                  Por ello, es necesario fortalecer las políticas públicas, mejorar la fiscalización y promover una agroexportación que genere crecimiento económico sin perjudicar los recursos naturales ni las condiciones de vida de la población.
                 </p>
               </div>
 
@@ -704,7 +737,7 @@
 
           <article class="manuscript-article">
             <div class="article-lead-paragraph">
-              El enfoque teórico permite comprender y analizar los impactos socioambientales de la expansión de la agroexportación en el Perú. Para ello, se articulan tres vertientes teóricas fundamentales que explican el desarrollo sostenible, la gestión comunitaria de los recursos comunes y los principios ecológicos aplicados a los sistemas alimentarios.
+              El enfoque teórico permite comprender y analizar los impactos socioambientales de la expansión de la agroexportación en el Perú. Para ello, se consideran autores y teorías que explican la importancia del desarrollo sostenible, la gestión responsable de los recursos naturales y la relación entre la agricultura y la sociedad.
             </div>
 
             <div class="article-body prose">
@@ -717,17 +750,20 @@
                 </div>
                 <div class="info-meta-card" style="background:#EEF4FB;border-left:4px solid var(--ucsur-navy);padding:0.85rem 1.15rem;margin-bottom:1.25rem;border-radius:0 4px 4px 0;">
                   <p style="margin:0;font-size:0.9rem;">
-                    <strong>Autor de referencia:</strong> Comisión Mundial sobre el Medio Ambiente y el Desarrollo (WCED, 1987) · Informe Brundtland.<br>
-                    <strong>Modelo:</strong> Tres dimensiones interdependientes del desarrollo sostenible: económica, social y ambiental.
+                    <strong>Autor de referencia:</strong> Comisión Mundial sobre el Medio Ambiente y el Desarrollo (1987).<br>
+                    <strong>Modelo:</strong> Tres dimensiones del desarrollo sostenible: económica, social y ambiental.
                   </p>
                 </div>
                 <p>
-                  Esta teoría postula que el desarrollo humano auténtico debe satisfacer las necesidades del presente sin comprometer la capacidad de las generaciones futuras para satisfacer sus propias necesidades. Conforme a las directrices de la <strong>Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO, 2021)</strong>, la sostenibilidad en la agricultura exige la coexistencia armónica de tres pilares: viabilidad y rentabilidad económica, equidad y justicia social, y preservación de la integridad ecológica de los ecosistemas.
+                  Esta teoría plantea que el desarrollo debe satisfacer las necesidades actuales sin comprometer la capacidad de las futuras generaciones para satisfacer sus propias necesidades.
+                </p>
+                <p>
+                  Según la <strong>Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO, 2021)</strong>, una agricultura sostenible debe garantizar la rentabilidad económica, la protección del medioambiente y la equidad social.
                 </p>
                 <div class="application-box" style="background:var(--bg-paper);border:1px solid var(--line-strong);border-left:4px solid var(--ucsur-navy);padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin:1.25rem 0;">
-                  <h4 style="margin:0 0 0.5rem 0;color:var(--ucsur-navy);font-size:1.05rem;">Aplicación a la problemática agroexportadora:</h4>
+                  <h4 style="margin:0 0 0.5rem 0;color:var(--ucsur-navy);font-size:1.05rem;">Aplicación a nuestra problemática:</h4>
                   <p style="margin:0;font-size:0.93rem;">
-                    La agroexportación en el Perú no puede medirse únicamente por récords en divisas y volúmenes exportados. La teoría del desarrollo sostenible demanda que el éxito comercial no se financie con el agotamiento irreversible de los acuíferos en la costa ni con la deforestación de bosques en la Amazonía, exigiendo remuneraciones dignas, condiciones de trabajo seguras y oportunidades equitativas para la agricultura familiar.
+                    La agroexportación peruana no debe enfocarse únicamente en incrementar las exportaciones y generar ingresos económicos, sino también en proteger los recursos naturales, garantizar condiciones laborales dignas y promover oportunidades para los pequeños agricultores. Por lo tanto, este enfoque permite analizar si el crecimiento agroexportador mantiene un equilibrio entre la economía, la sociedad y el medioambiente.
                   </p>
                 </div>
               </div>
@@ -740,17 +776,17 @@
                 </div>
                 <div class="info-meta-card" style="background:#EEF4FB;border-left:4px solid var(--ucsur-navy);padding:0.85rem 1.15rem;margin-bottom:1.25rem;border-radius:0 4px 4px 0;">
                   <p style="margin:0;font-size:0.9rem;">
-                    <strong>Autora de referencia:</strong> Elinor Ostrom (Premio Nobel de Economía 2009).<br>
-                    <strong>Modelo:</strong> Gobernanza institucional y gestión colectiva de los recursos de uso común (RUC).
+                    <strong>Autora:</strong> Elinor Ostrom (1990).<br>
+                    <strong>Modelo:</strong> Gestión colectiva de los recursos de uso común.
                   </p>
                 </div>
                 <p>
-                  Frente a la dicotomía tradicional entre privatización absoluta o control estatal burocrático, Ostrom demostró que los usuarios locales organizados pueden gobernar y preservar recursos compartidos —como cuencas, acuíferos y bosques— a través de acuerdos comunitarios legítimos, reglas claras de acceso, monitoreo mutuo y sanciones graduadas pactadas entre los propios actores.
+                  Esta teoría explica que los recursos naturales compartidos, como el agua, pueden administrarse de manera sostenible cuando las comunidades participan en su gestión, establecen reglas de uso y supervisan su cumplimiento.
                 </p>
                 <div class="application-box" style="background:var(--bg-paper);border:1px solid var(--line-strong);border-left:4px solid var(--ucsur-navy);padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin:1.25rem 0;">
-                  <h4 style="margin:0 0 0.5rem 0;color:var(--ucsur-navy);font-size:1.05rem;">Aplicación a la problemática agroexportadora:</h4>
+                  <h4 style="margin:0 0 0.5rem 0;color:var(--ucsur-navy);font-size:1.05rem;">Aplicación a nuestra problemática:</h4>
                   <p style="margin:0;font-size:0.93rem;">
-                    En los valles hiperáridos de la costa peruana, el agua subterránea constituye un recurso de uso común crítico. La sobreexplotación del acuífero responde a una lógica de "tragedia de los comunes" agravada por la asimetría de poder de los grandes consorcios. El enfoque de Ostrom fundamenta la necesidad de empoderar a las Juntas de Usuarios, garantizar la participación democrática de los pequeños regantes en los Consejos de Cuenca y establecer un monitoreo transparente de pozos para evitar el colapso del recurso hídrico.
+                    En las zonas agroexportadoras del Perú, especialmente en la costa, el agua es un recurso fundamental para las empresas agrícolas, los pequeños productores y las comunidades. Por ello, es necesario promover una distribución equitativa, la participación de los usuarios y una adecuada supervisión de su aprovechamiento. Esta teoría permite comprender la importancia de fortalecer la gestión del agua y la participación de las organizaciones de agricultores en las decisiones sobre los recursos hídricos.
                   </p>
                 </div>
               </div>
@@ -764,16 +800,16 @@
                 <div class="info-meta-card" style="background:#EEF4FB;border-left:4px solid var(--ucsur-navy);padding:0.85rem 1.15rem;margin-bottom:1.25rem;border-radius:0 4px 4px 0;">
                   <p style="margin:0;font-size:0.9rem;">
                     <strong>Autor de referencia:</strong> Pablo Tittonell (2023) y FAO (s. f.).<br>
-                    <strong>Modelo:</strong> Enfoque sistémico, ecológico y social de los sistemas agrícolas y alimentarios sostenibles.
+                    <strong>Modelo:</strong> Enfoque agroecológico de los sistemas alimentarios sostenibles.
                   </p>
                 </div>
                 <p>
-                  La agroecología concibe la parcela agrícola como un ecosistema vivo. Integra principios ecológicos (ciclaje de nutrientes, conservación de materia orgánica en suelos, fomento de biodiversidad, control biológico de plagas) con principios socioculturales (revalorización de saberes campesinos, circuitos cortos y soberanía alimentaria), ofreciendo alternativas viables al modelo de monocultivo industrial intensivo en insumos químicos.
+                  La agroecología integra principios ecológicos y sociales para desarrollar sistemas agrícolas sostenibles. Busca mejorar la producción sin perjudicar los ecosistemas y considera la participación de los agricultores y las comunidades.
                 </p>
                 <div class="application-box" style="background:var(--bg-paper);border:1px solid var(--line-strong);border-left:4px solid var(--ucsur-navy);padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin:1.25rem 0;">
-                  <h4 style="margin:0 0 0.5rem 0;color:var(--ucsur-navy);font-size:1.05rem;">Aplicación a la problemática agroexportadora:</h4>
+                  <h4 style="margin:0 0 0.5rem 0;color:var(--ucsur-navy);font-size:1.05rem;">Aplicación a nuestra problemática:</h4>
                   <p style="margin:0;font-size:0.93rem;">
-                    La agroecología proporciona la hoja de ruta para transitar desde monocultivos vulnerables hacia sistemas agroforestales diversificados (como café y cacao bajo sombra en la selva alta) y prácticas de conservación de humedad en la costa. Este enfoque demuestra que la productividad agroexportadora puede coexistir con la regeneración biológica del suelo y la soberanía comunitaria.
+                    Este enfoque plantea la necesidad de impulsar prácticas agrícolas responsables, reducir los impactos negativos sobre los recursos naturales, conservar la biodiversidad y fortalecer la participación de los pequeños productores. Por ello, representa una alternativa para que la agroexportación peruana avance hacia una producción más sostenible, sin dejar de lado el desarrollo económico y el bienestar social.
                   </p>
                 </div>
               </div>
@@ -784,40 +820,37 @@
                   <span class="article-subsection-pill">Subsección 4.4</span>
                   <h3 class="article-title">4.4. Relación de los enfoques teóricos con nuestra problemática</h3>
                 </div>
-                <p>
-                  La Tabla 3 sintetiza la correspondencia epistemológica entre cada marco teórico y las dimensiones críticas de la realidad socioambiental estudiada:
-                </p>
 
                 <div class="apa-table-wrapper" style="margin:1.5rem 0;">
                   <div class="apa-table-caption" style="font-size:0.85rem;margin-bottom:0.5rem;color:var(--ink-800);">
-                    <strong>Tabla 3.</strong> <em>Relación entre los enfoques teóricos y la problemática agroexportadora</em>
+                    <strong>Tabla 3.</strong> <em>Relación de los enfoques teóricos con nuestra problemática</em>
                   </div>
                   <div class="apa-table-scroll">
                     <table class="apa-table" style="min-width:550px;width:100%;">
                       <thead>
                         <tr>
                           <th style="width:35%;">Enfoque teórico</th>
-                          <th style="width:65%;">¿Qué nos permite analizar e interpretar?</th>
+                          <th style="width:65%;">¿Qué nos permite analizar?</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td><strong>Desarrollo sostenible</strong></td>
-                          <td>El equilibrio indispensable entre dinamismo económico, equidad social y protección de los límites biofísicos de la naturaleza.</td>
+                          <td>El equilibrio entre crecimiento económico, bienestar social y protección ambiental.</td>
                         </tr>
                         <tr>
-                          <td><strong>Bienes comunes (Elinor Ostrom)</strong></td>
-                          <td>La distribución, gobernanza colectiva y fiscalización transparente del agua y recursos naturales compartidos.</td>
+                          <td><strong>Bienes comunes – Ostrom</strong></td>
+                          <td>La distribución y gestión responsable del agua.</td>
                         </tr>
                         <tr>
-                          <td><strong>Agroecología (Tittonell / FAO)</strong></td>
-                          <td>La producción agrícola regenerativa, el manejo biológico del suelo y la conservación de ecosistemas frágiles.</td>
+                          <td><strong>Agroecología</strong></td>
+                          <td>La producción agrícola sostenible y la protección de los ecosistemas.</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                   <div class="apa-table-note" style="font-size:0.8rem;color:var(--ink-600);margin-top:0.4rem;font-style:italic;">
-                    <em>Nota:</em> Elaboración del Grupo 1 a partir de WCED (1987), Ostrom (1990) y Tittonell (2023).
+                    <em>Nota:</em> Relación conceptual elaborada a partir del marco teórico de EC2.
                   </div>
                 </div>
               </div>
@@ -829,10 +862,10 @@
                   <h3 class="article-title">4.5. Reflexión del enfoque teórico</h3>
                 </div>
                 <p>
-                  La convergencia de estos tres paradigmas conceptuales evidencia que la agroexportación peruana no puede seguir valorándose únicamente a través de estadísticas de comercio exterior. Un modelo que agota las fuentes subterráneas de agua, margina a las familias campesinas y vulnera los derechos laborales no es sostenible ni éticamente defendible.
+                  Los tres enfoques permiten comprender que la expansión de la agroexportación debe desarrollarse de manera equilibrada y responsable. No basta con incrementar las exportaciones; también es necesario proteger el agua, conservar los ecosistemas, respetar los derechos laborales y brindar oportunidades a los pequeños productores.
                 </p>
                 <p>
-                  Por tanto, la teoría nos brinda criterios científicos y normativos rigurosos para fundamentar propuestas de cambio: ordenamiento territorial de cuencas, gobernanza comunitaria del agua, fiscalización laboral efectiva e incentivos fiscales para la transición agroecológica en el Perú.
+                  Estos fundamentos teóricos ayudarán a orientar futuras propuestas de solución que permitan alcanzar una agroexportación más sostenible e inclusiva en el Perú.
                 </p>
               </div>
 
@@ -858,28 +891,28 @@
             <div class="conclusions-grid" style="display:flex;flex-direction:column;gap:1.5rem;">
 
               <div class="conclusion-card" style="background:var(--bg-white);border:1px solid var(--line-strong);border-left:5px solid var(--ucsur-navy);padding:1.5rem;box-shadow:var(--shadow-sm);border-radius:0 4px 4px 0;">
-                <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:700;color:var(--ucsur-amber);text-transform:uppercase;margin-bottom:0.4rem;">Conclusión 1 · Modelo Agrícola y Sostenibilidad</div>
+                <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:700;color:var(--ucsur-amber);text-transform:uppercase;margin-bottom:0.4rem;">Conclusión 1 · Crecimiento Económico y Equilibrio Socioambiental</div>
                 <p style="margin:0;font-size:0.97rem;line-height:1.65;color:var(--ink-900);">
                   La expansión de la agroexportación en el Perú ha contribuido al crecimiento económico y a la generación de empleo; sin embargo, también ha generado impactos socioambientales relacionados con el uso intensivo del agua, las desigualdades entre productores y las condiciones laborales. Por ello, es necesario promover un desarrollo agrícola que equilibre los aspectos económicos, sociales y ambientales.
                 </p>
               </div>
 
               <div class="conclusion-card" style="background:var(--bg-white);border:1px solid var(--line-strong);border-left:5px solid var(--ucsur-navy);padding:1.5rem;box-shadow:var(--shadow-sm);border-radius:0 4px 4px 0;">
-                <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:700;color:var(--ucsur-amber);text-transform:uppercase;margin-bottom:0.4rem;">Conclusión 2 · Balance de las Respuestas Estatales</div>
+                <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:700;color:var(--ucsur-amber);text-transform:uppercase;margin-bottom:0.4rem;">Conclusión 2 · Avances y Limitaciones de las Respuestas Estatales</div>
                 <p style="margin:0;font-size:0.97rem;line-height:1.65;color:var(--ink-900);">
                   La revisión de las tres propuestas de solución permitió identificar avances y limitaciones. AGROIDEAS ha contribuido al fortalecimiento de los pequeños productores, la Ley N.º 31110 ha establecido medidas de protección laboral y los programas de tecnificación del riego buscan mejorar el aprovechamiento del agua. No obstante, estas iniciativas todavía enfrentan dificultades para alcanzar resultados más amplios y sostenibles.
                 </p>
               </div>
 
               <div class="conclusion-card" style="background:var(--bg-white);border:1px solid var(--line-strong);border-left:5px solid var(--ucsur-navy);padding:1.5rem;box-shadow:var(--shadow-sm);border-radius:0 4px 4px 0;">
-                <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:700;color:var(--ucsur-amber);text-transform:uppercase;margin-bottom:0.4rem;">Conclusión 3 · Factores Limitantes y Gobernanza Coordinada</div>
+                <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:700;color:var(--ucsur-amber);text-transform:uppercase;margin-bottom:0.4rem;">Conclusión 3 · Causas Estructurales y Coordinación Intersectorial</div>
                 <p style="margin:0;font-size:0.97rem;line-height:1.65;color:var(--ink-900);">
                   Entre las principales causas que limitan la efectividad de las soluciones se encuentran la insuficiente fiscalización, las brechas económicas y tecnológicas, la informalidad laboral y los conflictos relacionados con el acceso al agua. Estos factores demuestran que los problemas de la agroexportación requieren una intervención coordinada entre el Estado, las empresas y la sociedad.
                 </p>
               </div>
 
               <div class="conclusion-card" style="background:var(--bg-white);border:1px solid var(--line-strong);border-left:5px solid var(--ucsur-navy);padding:1.5rem;box-shadow:var(--shadow-sm);border-radius:0 4px 4px 0;">
-                <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:700;color:var(--ucsur-amber);text-transform:uppercase;margin-bottom:0.4rem;">Conclusión 4 · Horizonte y Futuras Políticas Públicas</div>
+                <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:700;color:var(--ucsur-amber);text-transform:uppercase;margin-bottom:0.4rem;">Conclusión 4 · Aprendizajes para Futuras Políticas Públicas</div>
                 <p style="margin:0;font-size:0.97rem;line-height:1.65;color:var(--ink-900);">
                   Finalmente, las experiencias analizadas nos permiten comprender que el crecimiento de la agroexportación debe ir acompañado de políticas públicas efectivas, inversión en tecnología, protección de los recursos naturales y respeto de los derechos laborales. Estos aprendizajes servirán como base para diseñar futuras propuestas que contribuyan a una agroexportación más sostenible, inclusiva y responsable en el Perú.
                 </p>
@@ -1271,10 +1304,10 @@
   <div class="editorial-toast" id="editorial-toast" role="status" aria-live="polite"></div>
 
   <!-- Arquitectura JavaScript Modular UCSUR (con cache-busting v3) -->
-  <script src="./assets/js/data-report.js?v=20261120_v7"></script>
-  <script src="./assets/js/data-activities.js?v=20261120_v7"></script>
-  <script src="./assets/js/charts-engine.js?v=20261120_v7"></script>
-  <script src="./assets/js/ui-controller.js?v=20261120_v7"></script>
-  <script src="./app.js?v=20261120_v7"></script>
+  <script src="./assets/js/data-report.js?v=20261120_v8"></script>
+  <script src="./assets/js/data-activities.js?v=20261120_v8"></script>
+  <script src="./assets/js/charts-engine.js?v=20261120_v8"></script>
+  <script src="./assets/js/ui-controller.js?v=20261120_v8"></script>
+  <script src="./app.js?v=20261120_v8"></script>
 </body>
 </html>
